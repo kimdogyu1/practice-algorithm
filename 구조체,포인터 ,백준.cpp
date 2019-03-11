@@ -12,7 +12,7 @@ int main() {
 	vector sum;
 
 	sum = get_sum(a, b);
-	printf("¹éÅÍÇÕ (%f, %f)", sum.x, sum.y);
+	printf("Â¹Ã©Ã…ÃÃ‡Ã• (%f, %f)", sum.x, sum.y);
 }
 vector get_sum(vector a, vector b) {
 	vector result;
