@@ -1,0 +1,43 @@
+body {
+  font-family: '나눔고딕', NanumGothic, Dotum, sans-serif;
+}
+
+.header {
+  z-index: 100;
+  border-bottom: 1px solid black;
+  background: #000;
+  height: 120px;
+}
+
+.area_flex {
+  position: relative;
+  margin: 0 auto;
+  width: 1080px;
+  height: 100%;
+
+}
+
+.area_contents {
+  position:relative;
+  margin: 0 auto;
+  height: 100%;
+  background: pink;
+}
+.vertical-align {
+  display: table-cell;
+  vertical-align: middle;
+}
+.area_contents p{
+  font-size: 40px;
+  color: #fff;
+  font-weight: bold;
+  padding-left: 40px;
+}
+
+.container {
+  margin: 0 auto;
+  width: 1080px;
+  text-align: left;
+  background: yellow;
+  height:500px;
+}
