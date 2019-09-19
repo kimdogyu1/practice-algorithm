@@ -253,3 +253,28 @@ section{
 	white-space: nowrap;
 	text-overflow: ellipsis;
 }
+
+
+
+/* form  setting*/
+input[type="text"],
+input[type="password"] {
+    width: 198px;
+    height: 38px;
+    line-height: 38px;
+    border: 1px solid #ddd;
+    font-size: 15px;
+    text-indent: 10px;
+    color: #000;
+}
+
+textarea {
+    width: 280px;
+    height: 130px;
+    padding: 9px;
+    border: 1px solid #ddd;
+    font-size: 15px;
+    resize: none;
+    color: #000;
+}
+
