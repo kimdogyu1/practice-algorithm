@@ -213,3 +213,43 @@ p {
   -webkit-box-orient: vertical;
   -webkit-line-clamp: 3;
 }
+
+
+
+/* thumb */
+
+section{
+	overflow: hidden;
+	max-width: 900px;
+	margin: 50px auto;
+}
+.list{
+	margin: -5px;
+	overflow:hidden;
+}
+.list li{
+	float:left;
+	width: 20%;
+}
+
+/* !중요 사이간격 조정하기 */
+.inner{
+	display:block;
+	margin: 5px;
+	border:1px solid #000;
+}
+
+.thumb img{
+	width: 100%;
+	height: auto;
+	vertical-align: top;
+}
+.title{
+	overflow:hidden;
+	padding: 5px 0;
+	text-align:center;
+	font-size: 14px;
+	color:#555;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+}
