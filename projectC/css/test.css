@@ -101,5 +101,9 @@ width: 114px; height: 70px; background-position: center; }
 .menu{float:right;}
 
 .menu li {float:left; color: #333; font-size:22px;}
-/* display:block; */
+
 .menu a {line-height: 70px; padding: 0px 0px 0px 36px; }
+
+li:nth-child(1) a{padding: 0px;}
+
+.menu:hover {font-weight: bold;}
