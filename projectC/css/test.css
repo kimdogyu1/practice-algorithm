@@ -171,7 +171,7 @@ ul {list-style: none;font-size: 12px; line-height: 14px; text-align: center;}
 .info {display:none;position: absolute; background: #fff; width: 316px; height: 60px; bottom: 0px; color: #fff;  overflow: hidden; }
 
 
-.title { font-size: 18px; line-height: 60px; color: #333;}
+.title { font-size: 18px; line-height: 60px; color: #333;padding: 0 5px; overflow: hidden; text-overflow: ellipsis;  white-space: nowrap; }
 
 .more-area {background: #fff;background-image: url('../img/icon_arrow_more.png');background-repeat: no-repeat; background-position: 45% 50%;font-size: 16px; color:#333; width: 100%; height: 60px;cursor: pointer;
 }
