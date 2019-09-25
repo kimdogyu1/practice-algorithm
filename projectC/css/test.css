@@ -168,215 +168,217 @@ header li:nth-child(1) a{padding: 0px;}
 
 
 
-
-
-
       .img_wrap {position: relative;width: 316px; height: 316px;}
 
       .img_wrap:hover:after{
         background-color: rgba(255, 255, 255, 0.3);
       }
 
+      .thumbnail_area  a:hover .info {
+        display:block;
+      }
+
+
+
+
       .img_wrap:after { position: absolute; top: 0; right: 0; bottom: 0; left: 0;
         content: ''; border: 1px solid rgba(0, 0, 0, 0.1);}
 
 
-      .thumbnail_area .item_link {
-        position: relative;
-        display: block;
-      }
-
-      .thumbnail_area .item_link a:hover {
-
-      }
-
-
-
-
-      /* 나중에  js로 add class 해줘야 할 부분 */
-      .info {position: absolute; background: #fff; width: 316px; height: 60px; bottom: 0px;
-      color: #fff;  overflow: hidden; }
-
-
-      .title { font-size: 18px; line-height: 60px; color: #333;
-        /* overflow: hidden;
-        text-overflow: ellipsis;
-        white-space: nowrap; */
-      }
-
-      .more-area {background: #fff;background-image: url('../img/icon_arrow_more.png');
-      background-repeat: no-repeat; background-position: 45% 50%;
-      font-size: 16px; color:#333; width: 100%; height: 60px;
-    }
-
-
-
-
-    .message_form {width:100%;height:620px;background:#737492;}
-
-    .message_form_content {float: left; width:398px; height: 400px;margin-top: 80px;
-      background-image: url('../img/bg_pencil.png');
-      background-repeat: no-repeat; background-position:0% 96% ;
-      background-color: lightsalmon;}
-
-      .message_form_content p{width: 320px;height: 120px;font-size: 42px;line-height: 52px;color: #333;}
-
-      .message_form strong {font-size: 18px; color: #333;}
-
-      .message_form_aside {float: right; width:590px; height:460px; margin-top: 80px;
-        background-color: lightseagreen; line-height: 50px;
-        box-shadow: 0px 32px 2px 0px rgba(0, 0, 0, 0.08);}
-
-        .noice_aside img {vertical-align: middle;}
-
-        .message_form form {
-          padding: 40px 50px 0px 50px;
-          height: 380px;
-        }
-
-        fieldset{
-          height: 380px;
-        }
-
-        .message_form label {display: block;font-size: 16px; color: #333; height: 40px; font-weight: bold; }
-
-        .message_form input::placeholder {
-          color: #acacac;
-          font-size: 14px;
-        }
-
-        .message_form textarea::placeholder {
-          color: #acacac;
-          font-size: 14px;
-          padding: 15px;
-        }
-
-        .message_form input {
-          width:100%;
-          border: none;
-          background: lightseagreen;
-          padding-bottom: 10px;
-          border-bottom: 1px solid #c1c1c1;
-          font-size: 14px;
-          color:#333;
-        }
-        .message_form input[type~="email"] {
-          width:50%;
-        }
-
-        .message_form select {
-          width:46.5%;
-          border: none;
-          background: lightseagreen;
-          height: 36px;
-          border-bottom: 1px solid #c1c1c1;
-          font-size: 14px;
-          color:#333;
-          background-image: url('../img/icon_arrow_email.png');
-          background-repeat: no-repeat;
-          background-position: 97% 40%;
-        }
-        .message_form textarea {
-          width: 100%;
-          margin-top: 48px;
-          resize: none;
-
-
-        }
-        .message_form button[Type='submit'] {
+        .thumbnail_area .item_link {
           position: relative;
-          cursor: pointer;
-          border: 2px solid #bdbdbd;
-          background: #e9e9e9;
-          color:#666;
-          font-size: 15px;
-          width:100px;
-          height: 45px;
-          left: 390px;
-          top: -400px;
-        }
-
-        /* massage end */
-
-
-        .notice {width:100%;height:240px;background:yellow;}
-
-
-        .notice_content {
-          padding-top: 15px;
-          height: 20px;
-        }
-
-        .notice_content strong{
-          font-size: 16px;
-          color: #333;
-
-        }
-
-        .notice_content  p {
-          float: left;
-          font-size: 14px;
-          color: #333;
-        }
-
-        .txt_line {
-          width:345px;
-          padding:0 5px;
-          overflow:hidden;
-          text-overflow:ellipsis;
-          white-space:nowrap;
-        }
-
-        .notice button {
-          float: right;
-          cursor: pointer;
-          border: none;
-          font-size: 14px;
-          color: #333;
-          background: yellow;
-
-        }
-
-        .notice_content:after {
           display: block;
-          clear:both;
-          content:'';
-        }
-
-        .cross_long_bar {width:100%;margin: 35px 0px;border: 1px solid black;}
-
-        .detail_contents{
-          margin-left: 15px;
-        }
-        .detail_contents:nth-of-type(3) {
-          margin-left: 0px;
-        }
-
-        .vertical_bar {
-          margin: 0px 10px 0px 10px;
-          border-right: 1px solid #c1c1c1;
         }
 
 
 
 
-        /* notice_end */
 
-        footer {width:100%;height:100px;background:aqua; text-align: center;}
+        /* 나중에  js로 add class 해줘야 할 부분 */
+        .info {display:none;position: absolute; background: #fff; width: 316px; height: 60px; bottom: 0px;
+          color: #fff;  overflow: hidden; }
 
-        footer ul {
-          display: inline-block;
-          line-height: 50px;
+
+
+          .title { font-size: 18px; line-height: 60px; color: #333;
+            /* overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap; */
+          }
+
+          .more-area {background: #fff;background-image: url('../img/icon_arrow_more.png');
+          background-repeat: no-repeat; background-position: 45% 50%;
+          font-size: 16px; color:#333; width: 100%; height: 60px;
         }
 
-        footer li {
-          float: left;
-          margin-left: 30px;
-        }
-        footer ul:after {
-          display: block;
-          clear:both;
-          content:'';
-        }
 
-        footer li:first-child {margin-left: 0px;}
+
+
+        .message_form {width:100%;height:620px;background:#737492;}
+
+        .message_form_content {float: left; width:398px; height: 400px;margin-top: 80px;
+          background-image: url('../img/bg_pencil.png');
+          background-repeat: no-repeat; background-position:0% 96% ;
+          background-color: lightsalmon;}
+
+          .message_form_content p{width: 320px;height: 120px;font-size: 42px;line-height: 52px;color: #333;}
+
+          .message_form strong {font-size: 18px; color: #333;}
+
+          .message_form_aside {float: right; width:590px; height:460px; margin-top: 80px;
+            background-color: lightseagreen; line-height: 50px;
+            box-shadow: 0px 32px 2px 0px rgba(0, 0, 0, 0.08);}
+
+            .noice_aside img {vertical-align: middle;}
+
+            .message_form form {
+              padding: 40px 50px 0px 50px;
+              height: 380px;
+            }
+
+            fieldset{
+              height: 380px;
+            }
+
+            .message_form label {display: block;font-size: 16px; color: #333; height: 40px; font-weight: bold; }
+
+            .message_form input::placeholder {
+              color: #acacac;
+              font-size: 14px;
+            }
+
+            .message_form textarea::placeholder {
+              color: #acacac;
+              font-size: 14px;
+              padding: 15px;
+            }
+
+            .message_form input {
+              width:100%;
+              border: none;
+              background: lightseagreen;
+              padding-bottom: 10px;
+              border-bottom: 1px solid #c1c1c1;
+              font-size: 14px;
+              color:#333;
+            }
+            .message_form input[type~="email"] {
+              width:50%;
+            }
+
+            .message_form select {
+              width:46.5%;
+              border: none;
+              background: lightseagreen;
+              height: 36px;
+              border-bottom: 1px solid #c1c1c1;
+              font-size: 14px;
+              color:#333;
+              background-image: url('../img/icon_arrow_email.png');
+              background-repeat: no-repeat;
+              background-position: 97% 40%;
+            }
+            .message_form textarea {
+              width: 100%;
+              margin-top: 48px;
+              resize: none;
+
+
+            }
+            .message_form button[Type='submit'] {
+              position: relative;
+              cursor: pointer;
+              border: 2px solid #bdbdbd;
+              background: #e9e9e9;
+              color:#666;
+              font-size: 15px;
+              width:100px;
+              height: 45px;
+              left: 390px;
+              top: -400px;
+            }
+
+            /* massage end */
+
+
+            .notice {width:100%;height:240px;background:yellow;}
+
+
+            .notice_content {
+              padding-top: 15px;
+              height: 20px;
+            }
+
+            .notice_content strong{
+              font-size: 16px;
+              color: #333;
+
+            }
+
+            .notice_content  p {
+              float: left;
+              font-size: 14px;
+              color: #333;
+            }
+
+            .txt_line {
+              width:345px;
+              padding:0 5px;
+              overflow:hidden;
+              text-overflow:ellipsis;
+              white-space:nowrap;
+            }
+
+            .notice button {
+              float: right;
+              cursor: pointer;
+              border: none;
+              font-size: 14px;
+              color: #333;
+              background: yellow;
+
+            }
+
+            .notice_content:after {
+              display: block;
+              clear:both;
+              content:'';
+            }
+
+            .cross_long_bar {width:100%;margin: 35px 0px;border: 1px solid black;}
+
+            .detail_contents{
+              margin-left: 15px;
+            }
+            .detail_contents:nth-of-type(3) {
+              margin-left: 0px;
+            }
+
+            .vertical_bar {
+              margin: 0px 10px 0px 10px;
+              border-right: 1px solid #c1c1c1;
+            }
+
+
+
+
+            /* notice_end */
+
+            footer {width:100%;height:100px;background:aqua; text-align: center;}
+
+            footer ul {
+              display: inline-block;
+              line-height: 50px;
+            }
+
+            footer li {
+              float: left;
+              margin-left: 30px;
+            }
+            footer ul:after {
+              display: block;
+              clear:both;
+              content:'';
+            }
+
+            footer li:first-child {margin-left: 0px;}
