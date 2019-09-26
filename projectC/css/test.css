@@ -2,6 +2,7 @@
 
 /* common */
 body {
+
   margin: 0;
   padding: 0;
   font-family: '나눔 고딕', NanumGothic, '돋움', Dotum, sans-serif!important;
@@ -85,8 +86,6 @@ select { border-radius:0; /* 아이폰 사파리 보더 없애기 */
   appearance:none /* 화살표 없애기 공통*/
 }
 
-
-
 .blind {
   overflow: hidden!important;
   position: absolute!important;
@@ -98,9 +97,15 @@ select { border-radius:0; /* 아이폰 사파리 보더 없애기 */
 
 /* css reset  end*/
 
-.wrap {width:988px; margin: 0 auto;}
+.wrap {max-width:988px; margin: 0 auto;}
 
-header{height: 70px; background-color: #fff; width: 100%; }
+header{background-color: #fff; }
+
+header:after {
+  clear: both;
+  content: '';
+  display: block;
+}
 
 header h1{line-height: 70px; float:left; background-image: url("../img/logo_pc.png"); background-repeat: no-repeat;
 width: 114px; height: 70px; background-position: center; }
@@ -109,35 +114,36 @@ header.item_link {position: relative; display: block;}
 
 .menu{float:right;}
 
-.menu li {float:left; color: #333; font-size:22px;}
+.menu li {height: 70px;float:left; color: #333; font-size:22px;  padding: 0px 18px 0px 18px; }
 
-.menu a {line-height: 70px; padding: 0px 0px 0px 36px; }
+.menu a {line-height: 70px;}
 
-header li:nth-child(1) a{padding: 0px;}
 
-.menu:hover {font-weight: bold;}
+li:nth-last-child( 1 ) {padding-right: 0px;}
+
+.menu li:hover {font-weight: bold;}
 
 /* header end */
 
-.banner {width:100%;height:420px;background: #ffee02;}
+.banner {background: #ffee02;}
 
-.container {width: 800px; margin: 0 auto;}
+.banner:after {clear: both; content: ''; display: block;}
 
-.content {float: left; height: 340px;margin-top: 80px;background-color: #ffee02;}
+.bannertxt {float: left; height: 340px;margin-top: 80px;}
 
-.content p{width: 460px;height: 156px;font-size: 40px;line-height: 52px;color: #333;}
+.bannertxt h2{width: 460px;height: 156px;font-size: 40px;line-height: 52px;color: #333; font-weight: normal;}
 
-.content .elip {max-height: 156px; overflow: hidden;text-overflow: ellipsis;display: -webkit-box;-webkit-box-orient: vertical;-webkit-line-clamp: 3;}
+.bannertxt .elip {max-height: 156px; overflow: hidden;text-overflow: ellipsis;display: -webkit-box;-webkit-box-orient: vertical;-webkit-line-clamp: 3;}
 
 .cross_bar {width:50px;margin: 35px 0px;border: 1px solid black;}
 
-.user_thumbnail{display: inline-block;width:40px;height:40px;border-radius: 100%; background-image:url('../img/thumbnail_profile_none.jpg');background-repeat: no-repeat;background-size: cover; vertical-align: middle;}
+.user_thumbnail{display: inline-block;width:40px;height:40px;border-radius: 100%; background-image:url('../img/thumbnail_profile_none.jpg');background-repeat: no-repeat; background-size: 40px 40px;vertical-align: middle;}
 
 .user_thumbnail img{width:40px;height:40px;border-radius: 100%;}
 
 .user_nickname {font-size: 18px;color: #333;vertical-align: middle;}
 
-.aside {float: right;height: 420px;background-color: #ffee02;line-height: 420px;}
+.aside {float: right; height: 420px; line-height: 420px;}
 
 .aside img {vertical-align: middle;}
 
@@ -145,17 +151,22 @@ header li:nth-child(1) a{padding: 0px;}
 /* banner end */
 
 
-.thumbnail_area {width:100%;height:772px;background: #f0f0f0;}
+.thumbnail_area {background: #f0f0f0; padding-bottom: 20px;}
 
 ul {list-style: none;font-size: 12px; line-height: 14px; text-align: center;}
 
-.main_list {margin: 0 auto; padding: 20px 0px; }
+.main_list {margin: 0 auto; padding-top:20px; }
+
+.thumbnail_area:after {
+  clear: both;
+  content: '';
+  display: block;
+}
+
 .main_list li {float: left; width: 316px;height: 316px; line-height: 316px; margin-bottom: 20px;}
 .main_list:after { display: block; content: ''; clear: both; }
 .main_list li + li { margin-left: 20px; }
-.main_list li:nth-child(4) { margin-left:0px;}
-
-
+.main_list li:nth-child(3n+1) { margin-left:0px;}
 
 .img_wrap {position: relative;width: 316px; height: 316px;}
 .img_wrap:hover:after{
@@ -167,29 +178,31 @@ ul {list-style: none;font-size: 12px; line-height: 14px; text-align: center;}
 
 .thumbnail_area .item_link {position: relative; display: block; }
 
-
 .info {display:none;position: absolute; background: #fff; width: 316px; height: 60px; bottom: 0px; color: #fff;  overflow: hidden; }
-
 
 .title { font-size: 18px; line-height: 60px; color: #333;padding: 0 5px; overflow: hidden; text-overflow: ellipsis;  white-space: nowrap; }
 
-.more-area {background: #fff;background-image: url('../img/icon_arrow_more.png');background-repeat: no-repeat; background-position: 45% 50%;font-size: 16px; color:#333; width: 100%; height: 60px;cursor: pointer;
+.thumbnail_area button {background: #fff;background-image: url('../img/icon_arrow_more.png');background-repeat: no-repeat; background-position: 46.5% 50%; background-size:16px 16px; font-size: 16px; color:#333; width: 100%; height: 60px;cursor: pointer;
+
+border: 1px solid rgba(0, 0, 0, 0.1);
+font-size: 14px;
+color: #333;
 }
 
 /* thumb end */
 
 
-.wrap_background {  width:988px;  height: 620px;  margin: 0 auto;  background-image: url('../img/bg_pencil.png');  background-repeat: no-repeat; background-position: 50% 75%;}
+.wrap_background {width:988px;  height: 620px;  margin: 0 auto;  background-image: url('../img/bg_pencil.png');  background-repeat: no-repeat; background-position: 50% 75%;}
 
 .message_form {width:100%;height:620px;background:#f4f5f7;}
 
-.message_form_content {float: left; width:398px; height: 200px;margin-top: 80px; background-color: #f4f5f7;}
+.message_form_content {float: left; width:398px; margin-top: 80px; background-color: #f4f5f7;}
 
-.message_form_content p{width: 323px;height: 120px;font-size: 42px;line-height: 52px;color: #333;}
+.message_form_content h2{width: 323px;font-size: 42px;line-height: 52px; margin-bottom: 20px; color: #333; font-weight: normal;}
 
-.message_form strong {font-size: 18px; color: #333;}
+.message_form strong {font-size: 18px; color: #333; font-weight: normal;}
 
-.message_form_aside {float: right; width:590px; height:460px; margin-top: 80px; background-color: rgba(255,255,255,0.9); line-height: 50px; box-shadow: 0px 8px 32px 0px rgba(0, 0, 0, 0.08);}
+.message_form_aside {float: right; width:590px; height:460px; margin-top: 80px; background: rgba(255,255,255,0.9); line-height: 50px; box-shadow: 0px 8px 32px 0px rgba(0, 0, 0, 0.08);}
 
 
 .message_form form {
@@ -224,12 +237,14 @@ fieldset{
   font-size: 14px;
   color:#333;
 }
+
+
 .message_form input[type~="email"] {
-  width:50%;
+  width: 48%;
 }
 
 .message_form select {
-  width:46.5%;
+  width: 48%;
   border: none;
   background: rgba(255,255,255,0.9);
   height: 36px;
@@ -238,15 +253,17 @@ fieldset{
   color:#333;
   background-image: url('../img/icon_arrow_email.png');
   background-repeat: no-repeat;
+  background-size: 10px 6px;
   background-position: 97% 40%;
 }
+
 .message_form textarea {
   width: 100%;
   margin-top: 48px;
   resize: none;
-
-
+  background: rgba(255,255,255,0.9);
 }
+
 .message_form button[Type='submit'] {
   position: relative;
   cursor: pointer;
@@ -271,10 +288,10 @@ fieldset{
   height: 20px;
 }
 
-.notice_content strong{
+.notice_content h3{
+  display: inline-block;
   font-size: 16px;
   color: #333;
-
 }
 
 .notice_content  p {
@@ -285,7 +302,6 @@ fieldset{
 
 .txt_line {
   width:400px;
-  padding:0 5px;
   overflow:hidden;
   text-overflow:ellipsis;
   white-space:nowrap;
@@ -298,7 +314,6 @@ fieldset{
   font-size: 14px;
   color: #333;
   background: #f0f0f0;
-
 }
 
 .notice_content:after {
@@ -307,7 +322,7 @@ fieldset{
   content:'';
 }
 
-.cross_long_bar {width:100%;margin: 35px 0px;border: 1px solid black;}
+.cross_long_bar {width:100%;margin: 20px 0px 15px 0px;border: 1px solid black;}
 
 .detail_contents{
   margin-left: 15px;
@@ -346,3 +361,66 @@ footer ul:after {
 }
 
 footer li:first-child {margin-left: 0px;}
+
+/* footer end */
+
+
+
+@media (min-width: 768px)  and (max-width: 1023px){
+
+  .wrap {max-width:988px; margin: 0 auto; padding-left: 34px; padding-right: 34px;}
+  .wrap_background {max-width:988px;  height: 620px;  margin: 0 auto;
+   padding-left: 34px; padding-right: 34px;
+   background-image: url('../img/bg_pencil.png');
+   background-repeat: no-repeat; background-position: 50% 75%;}
+   header{height: 50px;}
+   header h1 {line-height: 50px; height: 50px;
+   background-image: url("../img/logo_m.png"); background-repeat: no-repeat;
+   background-size: 84px 18px; width: 114px; height: 50px; background-position: center;}
+  .menu a { line-height: 50px;}
+  .menu li {height: 50px;}
+
+
+ .banner {height: 330px; }
+ .bannertxt {margin-top: 60px; height: 270px;}
+ .bannertxt h2 { width: 350px; height: 130px; font-size: 32px; line-height: 40px; color: #333; }
+ .bannertxt .elip {max-height: 130px; overflow: hidden;text-overflow: ellipsis;display: -webkit-box;-webkit-box-orient: vertical;-webkit-line-clamp: 3;}
+ .cross_bar {margin: 25px 0px; }
+ .aside img { width:350px; height: 252px; }
+ .aside {height: 330px; line-height: 330px;}
+
+/* banner end */
+
+
+
+.thumbnail_area {width:100%;height:772px;background: #f0f0f0;}
+
+  ul {list-style: none;font-size: 12px; line-height: 14px; text-align: center;}
+
+  .main_list {margin: 0 auto; padding: 20px 0px; }
+  .main_list li {float: left; width: 48.8%; height: 316px; line-height: 316px; margin-bottom: 20px;}
+  .main_list:after { display: block; content: ''; clear: both; }
+  .main_list li:nth-child(3) { margin-left:0px;} .main_list li:nth-child(4) { margin-left:20px;} .main_list li:nth-child(5) { margin-left:0px;}
+
+  .img_wrap {position: relative;width: 100%; height: 316px;}
+  .img_wrap img { width: 100%;}
+  .img_wrap:hover:after{background-color: rgba(255, 255, 255, 0.3); }
+
+
+  .img_wrap:after { position: absolute; top: 0; right: 0; bottom: 0; left: 0;content: ''; border: 1px solid rgba(0, 0, 0, 0.1);}
+
+  .thumbnail_area .item_link {position: relative; display: block; }
+
+
+  .info {display:none;position: absolute; background: #fff; width: 316px; height: 50px; bottom: 0px; color: #fff;  overflow: hidden; }
+
+  .thumbnail_area  a:hover .info {display:none;}
+
+  .title { font-size: 18px; line-height: 60px; color: #333;padding: 0 5px; overflow: hidden; text-overflow: ellipsis;  white-space: nowrap; }
+}
+
+
+@media (min-width: 320px)  {
+
+
+}
