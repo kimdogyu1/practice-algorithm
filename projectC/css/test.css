@@ -22,6 +22,10 @@ input,select,textarea {
   color: #000
 }
 
+input {
+  padding-right: 0px !important;
+}
+
 address,dd,div,dl,dt,em,fieldset,form,h1,h2,h3,h4,iframe,input,li,object,ol,p,select,textarea,ul {
   margin: 0;
   padding: 0
@@ -192,8 +196,12 @@ color: #333;
 /* thumb end */
 
 
-.wrap_background {width:988px;  height: 620px;  margin: 0 auto;  background-image: url('../img/bg_pencil.png');  background-repeat: no-repeat; background-position: 50% 75%;}
-
+.wrap_background {width:988px;  margin: 0 auto;  background-image: url('../img/bg_pencil.png');  background-repeat: no-repeat; background-position: 50% 90%;}
+.wrap_background:after {
+  display: block;
+  content: '';
+  clear: both;
+}
 .message_form {width:100%;height:620px;background:#f4f5f7;}
 
 .message_form_content {float: left; width:398px; margin-top: 80px; background-color: #f4f5f7;}
@@ -239,15 +247,22 @@ fieldset{
 }
 
 
+
+.mail_area p {
+  display: inline-block;
+  width:20px;
+  text-align: center;
+}
 .message_form input[type~="email"] {
-  width: 48%;
+width: 230px;
 }
 
 .message_form select {
-  width: 48%;
+
+ width: 230px;
   border: none;
   background: rgba(255,255,255,0.9);
-  height: 36px;
+  height: 37px;
   border-bottom: 1px solid #c1c1c1;
   font-size: 14px;
   color:#333;
@@ -257,11 +272,12 @@ fieldset{
   background-position: 97% 40%;
 }
 
+
 .message_form textarea {
   width: 100%;
   margin-top: 48px;
   resize: none;
-  background: rgba(255,255,255,0.9);
+  background: rgba(255,255,255,0);
 }
 
 .message_form button[Type='submit'] {
@@ -278,10 +294,27 @@ fieldset{
 }
 
 /* massage end */
+.notice ul, .notice li {
+  display: inline;
+  font-size: 14px;
+  color: #333;
+}
 
+.notice_content li:nth-child(1) {
+  margin-right: 10px;
+}
 
-.notice {width:100%;height:240px;background:#f0f0f0;}
+.notice_content:nth-child(2) {
+  margin-bottom: 15px;
+}
 
+.notice {background:#f0f0f0; padding-bottom: 15px;}
+
+.notice:after {
+  content: '';
+  display: block;
+  clear: both;
+}
 
 .notice_content {
   padding-top: 15px;
@@ -294,10 +327,11 @@ fieldset{
   color: #333;
 }
 
-.notice_content  p {
+.notice_content strong {
   float: left;
   font-size: 14px;
   color: #333;
+  font-weight: normal;
 }
 
 .txt_line {
@@ -322,7 +356,7 @@ fieldset{
   content:'';
 }
 
-.cross_long_bar {width:100%;margin: 20px 0px 15px 0px;border: 1px solid black;}
+.cross_long_bar {border: 1px solid #c1c1c1;}
 
 .detail_contents{
   margin-left: 15px;
@@ -332,16 +366,14 @@ fieldset{
 }
 
 .vertical_bar {
-  margin: 0px 10px 0px 10px;
   border-right: 1px solid #c1c1c1;
 }
 
 
 
-
 /* notice_end */
 
-footer {width:100%;height:100px;background:#fff; text-align: center;font-size: 14px;color:#333;}
+footer {height:100px;background:#fff; text-align: center;font-size: 14px;color:#333;}
 
 footer ul {
   display: inline-block;
@@ -363,8 +395,6 @@ footer ul:after {
 footer li:first-child {margin-left: 0px;}
 
 /* footer end */
-
-
 
 @media (min-width: 768px)  and (max-width: 1023px){
 
