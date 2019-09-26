@@ -2,11 +2,11 @@
 <html lang="ko">
 <head>
   <meta charset="utf-8">
-  <meta http-equiv="Content-Script-Type" content="text/javascript">
+  <!-- <meta http-equiv="Content-Script-Type" content="text/javascript"> -->
   <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=2.0,minimum-scale=1.0,user-scalable=yes">
   <title>UI캠프 실습</title>
   <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
-  <link rel="stylesheet" type="text/css" href="css/test0.css">
+  <link rel="stylesheet" type="text/css" href="css/test.css">
 </head>
 
 
@@ -17,9 +17,9 @@
     <div class="wrap">
       <a href="#" class="item_link"><h1><span class="blind">Foodwith</span></h1></a>
       <ul class="menu">
-        <li><a href="#" >About</a></li>
-        <li><a href="#" >Work</a></li>
-        <li><a href="#" >Contact</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Work</a></li>
+        <li><a href="#">Contact</a></li>
       </ul>
     </div>
   </header>
@@ -27,8 +27,8 @@
 
   <div class="banner">
     <div class="wrap">
-      <div class="content">
-        <p class="elip"> 오븐 없이도 베이킹 가능! 달콤 상큼 봄맞이 노오븐 딸기 케이크 만들기!</p>
+      <div class="bannertxt">
+        <h2 class="elip"> 오븐 없이도 베이킹 가능! 달콤 상큼 봄맞이 노오븐 딸기 케이크 만들기!</h2>
         <div class="cross_bar"></div>
         <div class="user_thumbnail"><a href="#"><img src="img/thumbnail_profile.jpg" alt="사용자 사진"></a></div><span class="user_nickname"> FULLMOON</span>
       </div>
@@ -40,9 +40,7 @@
 
   <div class="thumbnail_area">
 
-
     <div class="wrap">
-
       <ul class="main_list">
         <li><a href="#" class="item_link">
           <div class="img_wrap"><img src="img/thumbnail_pumpkin.jpg" alt="호박 이미지" width="316" height="316"></div>
@@ -83,19 +81,17 @@
             <p class="title">건강한 아보카도 샌드위치 만들기</p>
           </div>
         </a></li>
-        <input value="더보기" type="button" class="more-area" >
       </ul>
+
+      <button type="button" name="button">더보기</button>
     </div>
   </div>
 
 
   <div class="message_form">
-
     <div class="wrap_background">
-
-
       <div class="message_form_content">
-        <p> 전하고 싶은 말을 남겨주세요.</p>
+        <h2> 전하고 싶은 말을 남겨주세요.</h2>
         <strong> 답변을 원하시면 이메일을 꼭 적어주세요.</strong>
       </div>
       <div class="message_form_aside">
@@ -106,11 +102,17 @@
             <label for='nickname'>닉네임</label>
             <input type="text" id ='nickname' name="nickname" autocomplete = "off" placeholder= "NICKNAME" >
             <label for='email'>이메일</label>
-            <input type="email" name="email" id="email" autocomplete = "off" placeholder= "ID">@
-            <select>
-              <option value="선택하세요">선택하세요</option>
-              <option value="naver">naver.com</option>
-            </select>
+
+
+            <div class="mail_area">
+              <input type="email" name="email" id="email" autocomplete = "off" placeholder= "ID"><span>@<span>
+
+              <select name="mail">
+                <option value="">선택하세요</option>
+                <option value="주소">naver.com</option>
+              </select>
+            </div>
+
             <textarea name="feedback" rows="10" cols="50" maxlength="500" placeholder="전하고 싶은 말을 100자 이내로 적어주세요."></textarea>
             <button type="submit" value="제출">전송하기</button>
           </fieldset>
@@ -121,26 +123,25 @@
 
 
 
-
-
-
   <div class="notice">
     <div class="wrap">
       <div class="notice_content">
-        <a href="#"><strong>공지사항</strong></a>
+        <a href="#"><h3>공지사항</h3></a>
       </div>
       <div class="notice_content ">
         <p class="txt_line">다양한 소식을 담은 foodwith! 정식 오픈을 안내드립니다.</p>
-        <a href="#" ><button>더보기</button></a>
+        <button>더보기</button>
       </div>
 
       <div class="cross_long_bar"></div>
 
       <div class="notice_content">
-        <a href="#"><strong>Creators</strong><span class="detail_contents">푸드 크리에이터</span> <span class="vertical_bar"></span>  <span class="detail_contents">푸드 비즈니스</span></a>
+        <h3>Creators</h3><a href="#"><span class="detail_contents">푸드 크리에이터</span>
+          <span class="vertical_bar"></span>  <span class="detail_contents">푸드 비즈니스</span></a>
       </div>
       <div class="notice_content">
-        <a href="#"><strong>Partners</strong><span class="detail_contents">푸드 파트너</span> <span class="vertical_bar"></span>  <span class="detail_contents">푸드 스토어</span></a>
+        <h3>Partners</h3><a href="#"><span class="detail_contents">푸드 파트너</span>
+          <span class="vertical_bar"></span>  <span class="detail_contents">푸드 스토어</span></a>
       </div>
     </div>
   </div>
@@ -154,9 +155,10 @@
         <li><a href="#">이용약관</a></li>
         <li><a href="#">고객센터</a></li>
       </ul>
-      <p>&copy; <b>foodwith</b> All Right Reserved.</p>
+      <p>&copy; <Strong>foodwith</Strong> All Right Reserved.</p>
     </div>
   </footer>
+
 
 </body>
 </html>
