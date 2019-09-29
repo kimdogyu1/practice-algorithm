@@ -146,9 +146,13 @@ li:nth-last-child( 1 ) {padding-right: 0px;}
 
 .bannertxt .elip {max-height: 156px; overflow: hidden;text-overflow: ellipsis;display: -webkit-box;-webkit-box-orient: vertical;-webkit-line-clamp: 3;}
 
-.cross_bar {width:50px;margin: 35px 0px;border: 1px solid black;}
+.cross_bar {margin: 35px 0px; }
+
+.bar { width: 40px; border: 1px solid black; display: inline-block;}
 
 .user_thumbnail{display: inline-block;width:40px;height:40px;border-radius: 100%; background-image:url('../img/thumbnail_profile_none.jpg');background-repeat: no-repeat; background-size: 40px 40px;vertical-align: middle;}
+
+.user_thumbnail a {display: inline-block;  width: 40px;  height: 40px; }
 
 .user_thumbnail img{width:40px;height:40px;border-radius: 100%;}
 
@@ -160,6 +164,7 @@ li:nth-last-child( 1 ) {padding-right: 0px;}
 
 
 /* banner end */
+
 
 
 .thumbnail_area {background: #f0f0f0; padding-bottom: 20px;}
@@ -184,7 +189,9 @@ ul {list-style: none;font-size: 12px; line-height: 14px; text-align: center;}
   background-color: rgba(255, 255, 255, 0.3);
 }
 
+
 .thumbnail_area  a:hover .info {display:block;}
+
 
 .img_wrap:after { position: absolute; top: 0; right: 0; bottom: 0; left: 0;content: ''; border: 1px solid rgba(0, 0, 0, 0.1);}
 
@@ -202,6 +209,7 @@ font-size: 14px;color: #333;}
 
 
 .wrap_background {max-width:988px;  margin: 0 auto;  background-image: url('../img/bg_pencil.png');  background-repeat: no-repeat; background-position: 50% 85%;}
+
 .wrap_background:after {
   display: block;
   content: '';
@@ -453,6 +461,10 @@ float: none; margin-top: 0px; width: inherit;
 
   /* header end */
 
+.banner {
+      padding: 20px 0px 40px 0px;
+}
+
 .bannertxt {
   float: none;
   height: auto;
@@ -477,7 +489,6 @@ float: none; margin-top: 0px; width: inherit;
 .aside {
   float: none;
   text-align: center;
-  margin-top: 20px;
   height: 0px;
   line-height: 0px;
 }
@@ -485,6 +496,14 @@ float: none; margin-top: 0px; width: inherit;
 .aside img {
   width:250px;
   height: 180px;
+}
+
+.cross_bar {
+  text-align: center;
+}
+
+.banner {
+  text-align: center;
 }
 
 
