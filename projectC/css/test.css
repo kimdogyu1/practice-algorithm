@@ -462,6 +462,7 @@ float: none; margin-top: 0px; width: inherit;
   /* header end */
 
 .banner {
+      text-align: center;
       padding: 20px 0px 40px 0px;
 }
 
@@ -502,9 +503,7 @@ float: none; margin-top: 0px; width: inherit;
   text-align: center;
 }
 
-.banner {
-  text-align: center;
-}
+
 
 
 
