@@ -510,6 +510,48 @@ float: none; margin-top: 0px; width: inherit;
 
 
 
+.thumbnail_area {background: #f0f0f0;}
+
+.main_list img {width: 100%;}
+
+.main_list li {float: left; width: auto; height: auto; margin-bottom: 55px;}
+
+.main_list:after { display: block; content: ''; clear: both; }
+
+.main_list li {  width: calc(100% - 30px);}
+.main_list li:nth-child(3n+1) { margin-left:15px;}
+.main_list li:nth-child(2n-1) { margin-left:15px;}
+.main_list li + li { margin-left: 15px; }
+
+.img_wrap {width: 100%; height: 100%;}
+
+.img_wrap:hover:after{background-color: inherit;}
+
+.thumbnail_area  a:hover .info {display:block;}
+
+.img_wrap:after { position: absolute; top: 0; right: 0; bottom: 0; left: 0;content: ''; border: 1px solid rgba(0, 0, 0, 0.1);}
+
+
+.info {display:block; position: absolute; background: #f0f0f0; width: 100%; height: 40px; bottom: -40px;
+color: #fff; margin-bottom: 0px; }
+
+.title { font-size: 18px; line-height: 40px; color: #333;padding: 0 5px;
+  overflow: hidden; text-overflow: ellipsis;  white-space: nowrap; }
+
+
+.thumbnail_area button {background: #fff;background-image: url('../img/icon_arrow_more.png');
+background-repeat: no-repeat; background-position: 45.5% 50%; background-size:16px 16px;
+font-size: 16px; color:#333; cursor: pointer;}
+
+
+.wrap_background {max-width:988px;   margin: 0 auto;
+ padding: 30px 34px 30px 34px;
+ background-image: none;
+ background-repeat: no-repeat; background-position: 50% 75%;
+}
+
+
+
 
 
 
