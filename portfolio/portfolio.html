@@ -1,181 +1,201 @@
 <!DOCTYPE html>
 <html lang="ko">
 <head>
-  <meta charset="utf-8">
-  <!-- <meta http-equiv="Content-Script-Type" content="text/javascript"> -->
-  <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=2.0,minimum-scale=1.0,user-scalable=yes">
-  <title>UI캠프 실습</title>
-  <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
-  <link rel="stylesheet" type="text/css" href="css/test.css">
+	<meta charset="utf-8">
+	<!-- <meta http-equiv="Content-Script-Type" content="text/javascript"> -->
+	<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=2.0,minimum-scale=1.0,user-scalable=yes">
+	<title>UI캠프 실습</title>
+	<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+	<link rel="stylesheet" type="text/css" href="css/test.css">
 
-  <style>
-    header {
-      width:100%;
-      height:100%;
-    }
+	<style>
+	header {
+		width:100%;
+		height:100%;
+	}
 
-    footer {
-      width:100%;
-      height:100px;
-    }
-
-
-    .banner {
-      width: 100%;
-      min-width: 1000px;
-      height: 430px;
-      background: url(img/banner.jpg) 50% 0 no-repeat;
-    }
+	footer {
+		width:100%;
+		height:100px;
+	}
 
 
-    .section1 {
-      position: relative;
-      width: 100%;
-      min-width: 1000px;
-      height: 725px;
-      background: url(img/section1.jpg) 50% 0 no-repeat;
-    }
+	.banner {
+		width: 100%;
+		min-width: 1000px;
+		height: 430px;
+		background: url(img/banner.jpg) 50% 0 no-repeat;
+	}
 
 
-    .section1_text {
-      word-break: normal;
-      text-align: center;
-      margin-bottom: 50px;
-      width:100%;
-    }
+	.section1 {
+		position: relative;
+		width: 100%;
+		min-width: 1000px;
+		height: 725px;
+		background: url(img/section1.jpg) 50% 0 no-repeat;
+	}
 
 
-    .section1_text .txt_area {
-      font-family: 'Nanum Gothic', sans-serif!important;
-      font-size: 18px;
-      line-height:26px;
-      letter-spacing: -1px;
-      color: #4465aa;
-      word-break: normal;
-    }
-
-    .section1 .First_Account_Enrollment {
-      position: absolute;
-      bottom: 29%;
-      left: 52%;
-      margin: 2px 0px 5px -1px;
-      width: 457px;
-      height: 67px;
-    }
-
-    .section1 .Total_Account_Enrollment {
-      position: absolute;
-      bottom: 50%;
-      left: 52%;
-      margin: 2px 0px 5px -1px;
-      width: 455px;
-      height: 67px;
-    }
+	.section1_text {
+		word-break: normal;
+		text-align: center;
+		margin-bottom: 50px;
+		min-width: 1000px;
+		width:100%;
+	}
 
 
-    .section2 {
-      position: relative;
-      width: 100%;
-      min-width: 1000px;
-      height: 280px;
-      background:#f1fef4 url(img/section2.jpg) 50% 0 no-repeat;
-    }
+	.section1_text .txt_area {
+		font-family: 'Nanum Gothic', sans-serif!important;
+		font-size: 18px;
+		line-height:26px;
+		letter-spacing: -1px;
+		color: #4465aa;
+		word-break: normal;
+	}
+
+	.section1 .First_Account_Enrollment {
+		position: absolute;
+		bottom: 29%;
+		left: 52%;
+		margin: 2px 0px 5px -1px;
+		width: 457px;
+		height: 67px;
+	}
+
+	.section1 .Total_Account_Enrollment {
+		position: absolute;
+		bottom: 50%;
+		left: 52%;
+		margin: 2px 0px 5px -1px;
+		width: 455px;
+		height: 67px;
+	}
 
 
-    .section3 {
-      position: relative;
-      width: 100%;
-      min-width: 1000px;
-      height: 280px;
-      background:#fcf2f4 url(img/section3.jpg) 50% 0 no-repeat;
-    }
-
-    .section2 .more_btn {
-      position: absolute;
-      bottom: 16%;
-      left: 51%;
-      width: 154px;
-      height: 42px;
-      margin-left: 10px;
-    }
+	.section2 {
+		position: relative;
+		width: 100%;
+		min-width: 1000px;
+		height: 280px;
+		background:#f1fef4 url(img/section2.jpg) 50% 0 no-repeat;
+	}
 
 
-    .section3 .more_btn {
-      position: absolute;
-      bottom: 9%;
-      left: 51%;
-      width: 154px;
-      height: 42px;
-      margin-left: 10px;
-    }
+	.section3 {
+		position: relative;
+		width: 100%;
+		min-width: 1000px;
+		height: 280px;
+		background:#fcf2f4 url(img/section3.jpg) 50% 0 no-repeat;
+	}
+
+	.section2 .more_btn {
+		position: absolute;
+		bottom: 16%;
+		left: 51%;
+		width: 154px;
+		height: 42px;
+		margin-left: 10px;
+	}
 
 
-    .section4 {
-      position: relative;
-      width: 100%;
-      min-width: 1000px;
-      background:url(img/section4.jpg) 50% 0 no-repeat;
-      height: 570px;
-    }
+	.section3 .more_btn {
+		position: absolute;
+		bottom: 9%;
+		left: 51%;
+		width: 154px;
+		height: 42px;
+		margin-left: 10px;
+	}
 
 
-    .section4 .Referrer_input_button{
-      position: absolute;
-      bottom: 12%;
-      left: 52%;
-      width: 455px;
-      height: 68px;
-    }
+	.section4 {
+		position: relative;
+		width: 100%;
+		min-width: 1000px;
+		background:url(img/section4.jpg) 50% 0 no-repeat;
+		height: 570px;
+	}
 
 
-    .section5 {
-      position: relative;
-      width: 100%;
-      min-width: 1000px;
-      padding-left: calc(50% - 490px);
-    }
+	.section4 .Referrer_input_button{
+		position: absolute;
+		bottom: 12%;
+		left: 52%;
+		width: 455px;
+		height: 68px;
+	}
 
 
-    .section5 .notice {
-      background: #f3f5f7;
-      width: 920px;
-      padding: 30px 0px 30px 40px;
-    }
-
-    .section5 .notice strong{
-      margin-left: -8px;
-      line-height:30px;
-    }
-    .section5 .notice li{
-      line-height:24px;
-    }
+	.section5 {
+		position: relative;
+		/* width: 100%; */
+		min-width: 1000px;
+		/* padding-left: calc(50% - 490px); */
+	}
 
 
-    .section6 {
-      position: relative;
-      width: 100%;
-      min-width: 1000px;
-      height: 402px;
-      background: url(img/section6.jpg) 50% 0 no-repeat;
-    }
+	.section5 .notice {
+		background: #f3f5f7;
+		width: 1100px;
+		height: 100%;
+		margin: 0 auto;
+	}
 
 
-    .section_rolling li {
-      display: inline-block;
-    }
-
-    .footer {
-      margin-top: 100px;
-    }
-
-    .tit_other {
-      font-size: 30px;
+	.section5 .notice strong{
+		margin-left: 45px;
+		line-height:30px;
+	}
 
 
-    }
+
+	.notice_list .item {
+		position: relative;
+		padding-left: 12px;
+		font-size: 14px;
+		letter-spacing: -0.35px;
+		line-height: 24px;
+		color: #777;
+	}
+
+	.notice_list li:before {
+		content: '';
+		position: absolute;
+		top: 11px;
+		left: 0;
+		width: 3px;
+		height: 3px;
+		background-color: #a1a1a1;
+		border-radius: 1.5px;
+	}
 
 
-  </style>
+
+
+	.section6 {
+		position: relative;
+		width: 100%;
+		min-width: 1000px;
+		height: 402px;
+		background: url(img/section6.jpg) 50% 0 no-repeat;
+	}
+
+
+
+
+	.footer {
+		margin-top: 100px;
+	}
+
+
+
+
+
+
+	</style>
 
 </head>
 
@@ -185,148 +205,228 @@
 
 <body>
 
-  <header>
+	<header>
 
-  </header>
-
-
-
-  <div class="banner">
-
-    <h2>친구야, 계좌결제 아직도 안쓰니?</h2>
-    <strong>첫 계좌등록하고 500원, 친구추천하고 200원씩 받자!</strong>
-
-
-  </div>
-
-  <div class="section1">
-    <h3>네이버페이 생에 첫 계좌등록시 500원, 통합계좌조회 하고 첫 등록하면 추가 500원 지급!</h3>
-    <strong>지금 바로 등록하세요! 롸잇나~우!</strong>
-    <p>실명확인 기준으로 첫 계좌등록 시에만 포인트를 지급합니다.</p>
-
-    <a href="#" class="First_Account_Enrollment"> <span class="blind"> 첫 계좌등록 하고 500원 받기 </span> </a>
-
-    <!-- <a href="#" class="Total_Account_Enrollment"></a> -->
-
-
-  </div>
+	</header>
 
 
 
-  <div class="section1_text">
-    <p class="txt_area">
-      ※ 통합계좌조회 하고 첫 계좌등록 시 500원 추가 지급되며, (총 1천원 지급)<br>
-      첫 계좌등록 이후에 통합계좌조회 하시면 500원 추가 지급되지 않습니다.
-    </p>
+	<div class="banner">
 
-  </div>
-
-  <div class="section2">
-    <a href="#" class="more_btn"></a>
-    <strong>포인트 충전 혜택</strong>
-    <p>5만원 이상 충전하면 2% 즉시 적립! 포인트 충전 받으세요!</p>
-  </div>
+		<h2>친구야, 계좌결제 아직도 안쓰니?</h2>
+		<strong>첫 계좌등록하고 500원, 친구추천하고 200원씩 받자!</strong>
 
 
-  <div class="section3">
-    <a href="#" class="more_btn"></a>
-    <strong>케이뱅크 X Pay통장<strong>
-      <p>10만원 이상 결제하면 매월 3천원! 충전하면 매일 100원!<br>
-        *상세조건 이벤트 페이지 참조
-      </p>
-    </div>
+	</div>
+
+	<div class="section1">
+		<h3>네이버페이 생에 첫 계좌등록시 500원, 통합계좌조회 하고 첫 등록하면 추가 500원 지급!</h3>
+		<strong>지금 바로 등록하세요! 롸잇나~우!</strong>
+		<p>실명확인 기준으로 첫 계좌등록 시에만 포인트를 지급합니다.</p>
+
+		<a href="#" class="First_Account_Enrollment"> <span class="blind"> 첫 계좌등록 하고 500원 받기 </span> </a>
+
+		<!-- <a href="#" class="Total_Account_Enrollment"></a> -->
+
+
+	</div>
 
 
 
-    <div class="section4">
-      <a href="#" class="Referrer_input_button"></a>
-    </div>
+	<div class="section1_text">
+		<p class="txt_area">
+			※ 통합계좌조회 하고 첫 계좌등록 시 500원 추가 지급되며, (총 1천원 지급)<br>
+			첫 계좌등록 이후에 통합계좌조회 하시면 500원 추가 지급되지 않습니다.
+		</p>
+
+	</div>
+
+	<div class="section2">
+		<a href="#" class="more_btn"></a>
+		<strong>포인트 충전 혜택</strong>
+		<p>5만원 이상 충전하면 2% 즉시 적립! 포인트 충전 받으세요!</p>
+	</div>
+
+
+	<div class="section3">
+		<a href="#" class="more_btn"></a>
+		<strong>케이뱅크 X Pay통장</strong>
+		<p>10만원 이상 결제하면 매월 3천원! 충전하면 매일 100원!<br>
+			*상세조건 이벤트 페이지 참조
+		</p>
+	</div>
 
 
 
-    <div class="section5">
-      <div class="notice">
-
-        <strong>꼭 알아두세요!</strong>
-
-        <ul>
-          <li>신규로 계좌등록을 마치신 분들만 참여하실 수 있습니다.(기존회원 불가)</li>
-          <li>기존 회원분들은 주변에 아직 계좌등록 안 쓰시는 분들께 많이 소문내주세요! 친구분들이 계좌등록하고 본인 아이디를 입력해주시면,추천인 혜택을 받으실 수 있습니다.</li>
-          <li>상세 내용은 추천인 입력 페이지에서 확인하실 수 있습니다.</li>
-          <li>부적절한 방법을 통한 응모는 모두 취소처리 되며, 법적인 처벌을 받을 수 있습니다.</li>
-        </ul>
-
-      </div>
-    </div>
-
-
-    <div class="section6">
-
-
-    </div>
+	<div class="section4">
+		<a href="#" class="Referrer_input_button"></a>
+	</div>
 
 
 
+	<div class="section5">
+		<div class="notice">
 
-    <div class="footer" id="footer">
+			<strong>꼭 알아두세요!</strong>
 
-      <div class="section_rolling">
+			<ul class="notice_list">
+				<li class="item">신규로 계좌등록을 마치신 분들만 참여하실 수 있습니다.(기존회원 불가)</li>
+				<li class="item">기존 회원분들은 주변에 아직 계좌등록 안 쓰시는 분들께 많이 소문내주세요! 친구분들이 계좌등록하고 본인 아이디를 입력해주시면,추천인 혜택을 받으실 수 있습니다.</li>
+				<li class="item">상세 내용은 추천인 입력 페이지에서 확인하실 수 있습니다.</li>
+				<li class="item">부적절한 방법을 통한 응모는 모두 취소처리 되며, 법적인 처벌을 받을 수 있습니다.</li>
+			</ul>
 
-        <div class="inner_rolling">
-
-          <strong class="tit_other">다른 이벤트</strong>
-          <div class="rolling swiper-container swiper-container-horizontal" id="rolling">
-            <ul style="width:1890px" class="swiper-wrapper">
-              <li class="swiper-slide swiper-slide-active"><a href="https://campaign.naver.com/event/myallaccount" target="_blank">
-                <img alt="통합계좌조회로 내 계좌를 한번에 볼 수 있습니다" height="200" src="img/list1.jpg"
-                width="210"></a></li>
-                <li class="swiper-slide swiper-slide-active"><a href="https://campaign.naver.com/event/myallaccount" target="_blank">
-                  <img alt="통합계좌조회로 내 계좌를 한번에 볼 수 있습니다" height="200" src="img/list2.jpg"
-                  width="210"></a></li>
-                  <li class="swiper-slide swiper-slide-active"><a href="https://campaign.naver.com/event/myallaccount" target="_blank">
-                    <img alt="통합계좌조회로 내 계좌를 한번에 볼 수 있습니다" height="200" src="img/list3.jpg"
-                    width="210"></a></li>
-                    <li class="swiper-slide swiper-slide-active"><a href="https://campaign.naver.com/event/myallaccount" target="_blank">
-                      <img alt="통합계좌조회로 내 계좌를 한번에 볼 수 있습니다" height="200" src="img/list4.jpg"
-                      width="210"></a></li>
-                    </ul>
-                  </div>
+		</div>
+	</div>
 
 
-                  <a class="btn_rolling btn_prev swiper-button-disabled" href="#" role="button"><span class="blind">이전</span></a>
-                  <a class="btn_rolling btn_next" href="#" role="button"><span class="blind">다음</span></a>
-                </div>
-              </div>
+	<div class="section6">
+
+
+	</div>
+
+
+	<style>
+
+	.footer {
+		position: relative;
+		clear: both;
+		min-width: 1130px;
+		background-color: #f6f7f9;
+		font-size: 12px;
+		text-align: center;
+	}
+
+	.section_rolling {
+		border-bottom: 1px solid #e4e4e5;
+	}
+
+	.section_rolling li {
+		display: inline-block;
+	}
+
+	.inner_rolling {
+		width: 960px;
+		padding: 57px 0 60px;
+		position: relative;
+		margin: 0 auto;
+		text-align: left;
+	}
+
+
+	.section_rolling .tit_other {
+		display: block;
+		font-size: 24px;
+		color: #555555;
+		font-weight: bold;
+		margin-bottom: 18px;
+		line-height: 25px;
+	}
+
+	.section_rolling .rolling {
+		width: 960px;
+		overflow: hidden;
+		position: relative;
+	}
+
+
+	.swiper-container {
+		margin-left: auto;
+		margin-right: auto;
+		overflow: hidden;
+		/* position: relative;
+		z-index: 1; */
+	}
+
+	.section_rolling .btn_prev {
+		left: -46px;
+		top: 100px;
+		background: url(img/left.jpg) no-repeat 0 0;
+	}
+
+	.section_rolling .btn_rolling {
+		position: absolute;
+		width: 46px;
+		height: 200px;
+
+	}
+
+	.section_rolling .btn_next {
+		right: -45px;
+		top: 100px;
+		background: url(img/right.jpg) no-repeat 0 0;
+		background-position: -15px 0px;
+	}
 
 
 
-              <div class="inner_footer">
-                <ul class="section_sns">
-                  <li class="item_sns"><a class="link_sns facbook" href="#">페이스북</a></li>
-                  <li class="item_sns"><a class="link_sns twitter" href="#">트위터</a></li>
-                  <li class="item_sns"><a class="link_sns band" href="#">밴드</a></li>
-                  <li class="item_sns"><a class="link_sns blog" href="#">블로그</a></li>
-                  <li class="item_sns"><a class="link_sns cafe" href="#">카페</a></li>
-                  <li class="item_sns"><a class="link_sns pholar" href="#">폴라</a></li>
-                </ul>
-                <div class="section_copy">
-                  <p>Copyright<em>©</em><a href="http://www.navercorp.com/" target="_blank"> NAVER Corp. </a> All Rights Reserved.</p>
-                </div>
-              </div>
-            </div>
+</style>
+
+
+<div class="footer" id="footer">
+
+	<div class="section_rolling">
+
+		<div class="inner_rolling">
+
+			<strong class="tit_other">다른 이벤트</strong>
+			<div class="swiper-container" >
+				<ul style="width:1890px">
+					<li><a href="https://campaign.naver.com/event/myallaccount" target="_blank">
+						<img alt="통합계좌조회로 내 계좌를 한번에 볼 수 있습니다" height="200" src="img/list1.jpg"
+						width="210"></a></li>
+						<li><a href="https://campaign.naver.com/event/myallaccount" target="_blank">
+							<img alt="통합계좌조회로 내 계좌를 한번에 볼 수 있습니다" height="200" src="img/list2.jpg"
+							width="210"></a></li>
+							<li><a href="https://campaign.naver.com/event/myallaccount" target="_blank">
+								<img alt="통합계좌조회로 내 계좌를 한번에 볼 수 있습니다" height="200" src="img/list3.jpg"
+								width="210"></a></li>
+								<li><a href="https://campaign.naver.com/event/myallaccount" target="_blank">
+									<img alt="통합계좌조회로 내 계좌를 한번에 볼 수 있습니다" height="200" src="img/list4.jpg"
+									width="210"></a></li>
+									<li><a href="https://campaign.naver.com/event/myallaccount" target="_blank">
+										<img alt="통합계좌조회로 내 계좌를 한번에 볼 수 있습니다" height="200" src="img/list1.jpg"
+										width="210"></a></li>
+									</ul>
+								</div>
+
+
+								<a class="btn_rolling btn_prev swiper-button-disabled" href="#" role="button"><span class="blind">이전</span></a>
+								<a class="btn_rolling btn_next" href="#" role="button"><span class="blind">다음</span></a>
+
+								
+							</div>
+						</div>
+
+
+
+						<div class="inner_footer">
+							<ul class="section_sns">
+								<li class="item_sns"><a class="link_sns facbook" href="#">페이스북</a></li>
+								<li class="item_sns"><a class="link_sns twitter" href="#">트위터</a></li>
+								<li class="item_sns"><a class="link_sns band" href="#">밴드</a></li>
+								<li class="item_sns"><a class="link_sns blog" href="#">블로그</a></li>
+								<li class="item_sns"><a class="link_sns cafe" href="#">카페</a></li>
+								<li class="item_sns"><a class="link_sns pholar" href="#">폴라</a></li>
+							</ul>
+							<div class="section_copy">
+								<p>Copyright<em>©</em><a href="http://www.navercorp.com/" target="_blank"> NAVER Corp. </a> All Rights Reserved.</p>
+							</div>
+						</div>
+					</div>
 
 
 
 
 
 
-            <footer>
+					<footer>
 
-            </footer>
-
-
-
-          </body>
+					</footer>
 
 
-          </html>
+
+				</body>
+
+
+				</html>
