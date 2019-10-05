@@ -483,3 +483,948 @@
 
 
 				</html>
+
+
+
+
+/////////////////////////////////////////////////////////////////////////////////10/5
+
+
+
+
+
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<!-- <meta http-equiv="Content-Script-Type" content="text/javascript"> -->
+	<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=2.0,minimum-scale=1.0,user-scalable=yes">
+	<title>naverpay_promotionpage</title>
+	<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+	<link rel="stylesheet" type="text/css" href="css/test0.css">
+
+	<style>
+
+	.promotion_wrap {
+		min-width: 320px;
+	}
+
+	.u_skip {
+		left: -999em;
+		font-size: 0;
+		line-height: 0;
+		overflow: hidden !important;
+		position: absolute !important;
+		clip: rect(0 0 0 0) !important;
+		width: 1px !important;
+		height: 1px !important;
+		margin: -1px !important;
+	}
+
+	.header {
+		position: relative;
+		z-index: 100;
+		background-color: #00c73c;
+	}
+
+	link {
+		display: none;
+	}
+
+
+	.htit {
+		overflow: hidden;
+		position: relative;
+		height: 48px;
+	}
+
+	.htit .h1 {
+		height: 100%;
+		font-size: 18px;
+		line-height: 48px;
+		font-weight: normal;
+		color: #fff;
+		text-align: center;
+	}
+
+	.htit .h1 .gnb_naver {
+		width: 48px;
+		background-color: rgba(0,0,0,.1);
+	}
+
+	/* 나머지 class 존재 유무? , .htit .h1 strong:before,
+	.htit .gnb_cart:before, .htit .gnb_prev:before, .htit .gnb_cls:before,
+	.htit .gnb_logo:before */
+
+	.htit .h1 a:before{
+		background: url(img/naver_header1.jpg) no-repeat;
+		background-size: 110px auto;
+		-webkit-background-size: 110px auto;
+	}
+
+	.htit .h1 a, .htit .h1 strong {
+		display: block;
+		position: relative;
+		float: left;
+		height: 100%;
+	}
+
+	/* 유무구분 필요 */
+	.htit .h1 .gnb_naver:before {
+		background-position: 0 0;
+	}
+
+
+	.htit .h1 a:before, .htit .h1 strong:before {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		content: '';
+	}
+
+	.htit .h1 .gnb_pay {
+		width: 57px;
+	}
+
+	.htit .h1 a, .htit .h1 strong {
+		display: block;
+		position: relative;
+		float: left;
+		height: 100%;
+	}
+
+	.htit .h1 .gnb_pay:before {
+		background-position: -48px 0;
+	}
+
+	.htit .h1 .gnb_shopping {
+		width: 50px;
+		position: relative;
+		padding-left: 1px;
+	}
+
+	.htit .h1 .gnb_shopping:before {
+		background-position: 0 -96px;
+	}
+
+	.htit .g_menu {
+		position: absolute;
+		top: 0;
+		right: 3px;
+		height: 48px;
+	}
+
+	.htit .g_menu a {
+		display: block;
+		float: left;
+		position: relative;
+	}
+
+	.htit .gnb_set {
+		width: 38px;
+	}
+
+	.htit .gnb_set, .htit .gnb_smy {
+		font-size: 16px;
+		line-height: 48px;
+		font-family: HelveticaNeue-Roman,Helvetica,AppleSDGothicNeo-Regular,'나눔고딕',nanumgothic,sans-serif;
+		color: #fff;
+		text-align: center;
+		white-space: nowrap;
+	}
+
+	.lnb {
+		position: relative;
+		height: 42px;
+		background-color: #fff;
+	}
+
+	.lnb .selected span {
+		height: 40px!important;
+		border-bottom: 2px solid #00c73c;
+	}
+
+	.lnb .selected a {
+		font-family: HelveticaNeue-Light,Helvetica,AppleSDGothicNeo-Semibold,"나눔고딕",nanumgothic,sans-serif;
+		color: #00c73c!important;
+	}
+
+
+
+	.lnb .inr {
+		padding: 0 6px;
+	}
+
+	.lnb .h_scl_u {
+		display: table;
+		white-space: nowrap;
+	}
+
+	.lnb .h_scl_o {
+		display: table-cell;
+		width: 200px;
+		margin: 0;
+		text-align: center;
+		white-space: nowrap;
+	}
+
+	.lnb .h_scl_o a {
+		display: block;
+		position: relative;
+		height: 42px;
+		padding: 0 6px 0 5px;
+		font-size: 16px;
+		line-height: 42px;
+		color: #000;
+	}
+
+	.lnb .h_scl_o span {
+		display: inline-block;
+		height: 100%;
+		padding: 0 3.5px;
+		vertical-align: top;
+	}
+
+	.lnb:after {
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		width: 100%;
+		height: 1px;
+		background-color: rgba(0,0,0,0.12);
+		content: '';
+	}
+	.snb {
+		position: relative;
+		z-index: 10;
+		height: 41px;
+		border-bottom: 1px solid rgba(0,0,0,0.12);
+		background-color: #fafafa;
+	}
+	.snb ul {
+		display: table;
+		width: 100%;
+		table-layout: fixed;
+	}
+	.snb li {
+		display: table-cell;
+		text-align: center;
+	}
+
+	.snb li + li a:before {
+		position: absolute;
+		top: 0;
+		left: 0;
+		bottom: 0;
+		width: 1px;
+		height: 13px;
+		margin: auto;
+		background-color: rgba(0,0,0,.1);
+		content: '';
+	}
+
+	.snb .selected a {
+		font-weight: 600;
+		color: #fff;
+	}
+
+	.snb li a {
+		display: block;
+		position: relative;
+		padding: 9px 0 8px;
+		line-height: 24px;
+		font-size: 16px;
+		color: #000;
+	}
+
+	.snb .selected a span {
+		background-color: #00c73c;
+	}
+
+	.snb li a span {
+		display: inline-block;
+		padding: 0 5px;
+		vertical-align: top;
+	}
+
+	.snb .selected a {
+		font-weight: 600;
+		color: #fff;
+	}
+
+
+
+	</style>
+
+
+</head>
+
+
+
+
+
+<body>
+
+	<div class="promotion_wrap">
+
+
+		<div class="u_skip">
+			<a href="#" target="_blank">본문 바로가기</a>
+		</div>
+
+		<div class="header">
+			<div class="h_sc">
+				<div class="htit">
+					<h1 class="h1">
+						<a href="http://m.naver.com" class="gnb_naver N=a:gnb.naver" target="_blank"><span class="blind">네이버</span></a>
+						<a href="http://m.pay.naver.com/mobile/home" class="_npay gnb_pay N=a:gnb.pay" target="_blank"><span class="blind">페이</span></a>
+						<!-- <a href="http://shopping2.naver.com/home/m/index.nhn" class="gnb_shopping N=a:gnb.my" target="_blank"><span class="blind">쇼핑</span></a> -->
+					</h1>
+					<div class="g_menu">
+						<a href="http://m.pay.naver.com/mobile/setting/home" class="gnb_set N=a:gnb.setting" target="_blank">설정</a>
+					</div>
+				</div>
+
+
+				<!-- 홈 -->
+				<!-- 주문·결제 -->
+				<!-- 적립·충전 -->
+				<!-- 송금 -->
+				<!-- 판매·정산 -->
+				<!-- 이벤트·쿠폰 -->
+				<!-- 문의·리뷰 -->
+				<div class="lnb _layout_lnb">
+					<span class="grd_prev"></span>
+					<span class="grd_next"></span>
+					<div class="_layout_lnb_view" style="overflow:hidden;z-index:2000;position:relative;height:42px">
+						<div class="inr _layout_lnb_scroller"  style="position: absolute; z-index: 1; left: 0px; top: 0px; transition-property: -webkit-transform; transform: translate3d(0px, 0px, 0px); transition-timing-function: cubic-bezier(0.18, 0.35, 0.56, 1); height: 100%;">
+							<ul class="h_scl_u">
+								<li class="h_scl_o menu1"><a href="#" target="_blank"><span>홈</span></a></li>
+								<li class="h_scl_o menu2"><a href="#" class="N=a:lnb.order" target="_blank"><span>주문·결제</span></a></li>
+								<li class="h_scl_o menu4"><a href="#" class="N=a:lnb.send" target="_blank"><span>적립·충전</span></a></li>
+								<li class="h_scl_o menu8"><a href="#" class="N=a:lnb.gift" target="_blank"><span>송금</span></a></li>
+								<li class="h_scl_o menu3 selected"><a href="#" class="N=a:lnb.point" target="_blank"><span>이벤트·쿠폰</span></a></li>
+								<li class="h_scl_o menu6 "><a href="#" class="N=a:lnb.event" target="_blank"><span>기타 등등</span></a></li>
+								<li class="h_scl_o menu7"><a href="#" class="N=a:lnb.review" target="_blank"><span>등등</span></a></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+
+				<!-- 이벤트·쿠폰 -->
+
+				<div class="snb">
+					<ul class="ws_tp4">
+						<li class="selected"><a href="http://event2.pay.naver.com/v/m/event/benefit/list" class="N=a:snb.event" target="_blank"><span>이벤트</span></a></li>
+						<li><a href="http://m.pay.naver.com/b/coupon" class="N=a:snb.coupon" target="_blank"><span>쿠폰</span></a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+
+
+
+
+
+
+		<style>
+
+
+
+		.banner {
+
+
+			margin: 5px 0 0 0;
+			height: 305px;
+			background: #337ab7 url(img/banner_m.jpg) 50% 0 no-repeat;
+			background-size: 320px 305px;
+			-webkit-background-size: 320px 305px;
+		}
+
+
+
+		.inner {
+			overflow: hidden;
+			position: relative;
+			width: 320px;
+			height: 100%;
+			margin: 0 auto;
+		}
+
+
+		.section1 {
+			height: 595px;
+			background: #fff url(img/section1_m.jpg) no-repeat 50% 0;
+			background-size: 320px 595px;
+			-webkit-background-size: 320px 595px;
+
+		}
+
+
+		.section1 .First_Account_Enrollment {
+			position: absolute;
+			bottom: 12%;
+			left: 11%;
+			width: 250px;
+			height: 42px;
+		}
+
+
+		.section1 .Total_Account_Enrollment {
+			position: absolute;
+			bottom: 20%;
+			left: 11%;
+			width: 250px;
+			height: 42px;
+			margin-bottom: -2px;
+		}
+
+
+		</style>
+
+
+		<!-- banner area -->
+		<!-- <div class="content"> -->
+
+
+		<div class="banner">
+
+
+
+			<h2>친구야, 계좌결제 아직도 안쓰니?</h2>
+			<strong>첫 계좌등록하고 500원, 친구추천하고 200원씩 받자!</strong>
+
+
+		</div>
+
+
+
+
+
+
+		<div class="section1">
+			<div class="inner">
+
+				<h3>네이버페이 생에 첫 계좌등록시 500원, 통합계좌조회 하고 첫 등록하면 추가 500원 지급!</h3>
+				<strong>지금 바로 등록하세요! 롸잇나~우!</strong>
+				<p>실명확인 기준으로 첫 계좌등록 시에만 포인트를 지급합니다.</p>
+
+				<a href="#" class="Total_Account_Enrollment"> <span class="blind"> 통합계좌조회 하고 계좌 등록하기 </span> </a>
+				<a href="#" class="First_Account_Enrollment"> <span class="blind"> 첫 계좌등록 하고 500원 받기 </span> </a>
+				<!-- <a href="#" class="Total_Account_Enrollment"></a> -->
+
+				<p>
+					※ 통합계좌조회 하고 첫 계좌등록 시 500원 추가 지급되며, (총 1천원 지급)
+					첫 계좌등록 이후에 통합계좌조회 하시면 500원 추가 지급되지 않습니다.</p>
+
+				</div>
+			</div>
+
+
+
+
+
+			<div class="section2">
+				<div class="inner">
+					<a href="#" class="more_btn"></a>
+					<strong>포인트 충전 혜택</strong>
+					<p>5만원 이상 충전하면 2% 즉시 적립! 포인트 충전 받으세요!</p>
+				</div>
+			</div>
+
+
+			<div class="section3">
+				<div class="inner">
+					<a href="#" class="more_btn"></a>
+					<strong>케이뱅크 X Pay통장</strong>
+					<p>10만원 이상 결제하면 매월 3천원! 충전하면 매일 100원!<br>
+						*상세조건 이벤트 페이지 참조
+					</p>
+				</div>
+			</div>
+
+
+
+			<div class="section4">
+				<div class="inner">
+
+					<strong>친구에게 추천받고 오셨어요? 꼭 알려주세요~</strong>
+					<p>친구야 아직도 안 했니 계좌등록?</p>
+
+					<div class="Participation_Condition">
+						<strong>참여조건</strong> <p>계좌등록하신 기존회원분께 소식들으셨나요?<br>
+							추천받고 신규로 등록하셨으면 알려주세요.<br> 추천해주신 분, 추천받고 새로
+							가입하신 분 <br>양쪽 모두에 페이포인트 선물드립니다.
+						</p>
+					</div>
+
+					<div class="Point_payment">
+						<strong>포인트 지급</strong> <p>추천인 입력 즉시</p>
+					</div>
+
+					<a href="#" class="Enter_referrer_btn"><span class="blind">추천인 입력하고 200원 받기</span></a>
+
+				</div>
+			</div>
+
+
+
+
+			<div class="section_notice">
+				<div class="inner">
+					<h3 class="notice_tit">꼭 알아두세요!</h3>
+					<ul class="notice_list">
+						<li class="item">신규로 계좌등록을 마치신 분들만 참여하실 수 있습니다. <br> (기존회원불가)</li>
+						<li class="item">기존회원분들은 주변에 아직 계좌등록 안 쓰시는 분들께 많이<br>소문내주세요! 친구분들이 계좌등록하고 본인 아이디를 <br>
+							입력해주시면, 추천인 혜택을 받으실 수 있습니다. </li>
+							<li class="item">상세 내용은 추천인 입력 페이지에서 확인하실 수 있습니다.</li>
+							<li class="item">부적절한 방법을 통한 응모는 모두 취소처리 되며, 법적인 처벌을 <br> 받을 수 있습니다.</li>
+						</ul>
+					</div>
+				</div>
+
+
+
+
+
+				<div class="section5">
+					<div class="inner">
+						<a href="#" class="more_btn"></a>
+						<strong>네이버페이 포인트 500원, 이렇게 쓰는 게 꿀이라던데?</strong>
+
+					</div>
+				</div>
+
+
+
+
+
+
+				<div class="wrap_flick">
+					<div class="tit_area">
+						<strong class="tit">다른 이벤트</strong>
+					</div>
+					<div class="flick_event">
+						<div id="event" style="overflow: scroll hidden; z-index: 2000; position: relative; height: 175px;">
+							<ul class="event_list" style="position: absolute; z-index: 1; left: 0px; top: 0px; transition-property: -webkit-transform; transform: translate(0px, 0px); height: 100%; pointer-events: auto;">
+								<li><a href="#"><img alt="네이버페이 신용카드 출시 이벤트 오픈" height="145" src="img/list1_m.jpg" width="145"></a></li>
+								<li><a href="#"><img alt="포인트 아끼지 말고 잘 쓰자!" height="145" src="img/list2_m.jpg" width="145"></a></li>
+								<li><a href="#"><img alt="네이버페이 신용카드 출시 이벤트 오픈" height="145" src="img/list1_m.jpg" width="145"></a></li>
+								<li><a href="#"><img alt="포인트 아끼지 말고 잘 쓰자!" height="145" src="img/list2_m.jpg" width="145"></a></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+
+
+
+				<div class="section6">
+					<div class="inner">
+						<a href="#" class="more_btn"></a>
+						<strong>네이버페이에 더 빠르게 접속하세요</strong>
+						<p>네이버페이 바로가기 추가</p>
+
+					</div>
+				</div>
+
+
+
+				<div class="footer">
+
+					<ul class="list_sns">
+						<li class="item_sns"><a class="link_sns" href="#"><span class="blind">페이스북</span></a></li>
+						<li class="item_sns"><a href="#"><span class="blind">트위터</span></a></li>
+						<li class="item_sns"><a href="#"><span class="blind">밴드</span></a></li>
+						<li class="item_sns"><a href="#"><span class="blind">네이버블로그</span></a></li>
+						<li class="item_sns"><a href="#"><span class="blind">네이버카페</span></a></li>
+						<li class="item_sns"><a href="#"><span class="blind">라인</span></a></li>
+						<li class="item_sns"><a href="#"><span class="blind">네이버톡톡</span></a></li>
+						<li class="item_sns"><a href="#"><span class="blind">폴라</span></a></li>
+					</ul>
+					<p class="copy"><a class="link_corp" href="http://www.navercorp.com">© NAVER Corp.</a></p>
+				</div>
+
+
+
+
+			</div>
+
+
+
+
+
+		</body>
+		</html>
+
+
+////////////////////////////////10.5 css///////
+
+@charset "utf-8";
+
+/* common */
+body {
+
+  margin: 0;
+  padding: 0;
+  font-family: '나눔 고딕', NanumGothic, '돋움', Dotum, sans-serif!important;
+  text-align: left;
+  font-size: 13px;
+  line-height:20px;
+  color: #000
+}
+
+html[data-useragent*=mac] body * {
+  font-family:'나눔 고딕', NanumGothic, '돋움', Dotum, sans-serif!important;
+}
+
+input,select,textarea {
+  font-family:'나눔 고딕', NanumGothic, '돋움', Dotum, sans-serif;
+  font-size: 13px;
+  color: #000
+}
+
+input {
+  padding-right: 0px !important;
+}
+
+address,dd,div,dl,dt,em,fieldset,form,h1,h2,h3,h4,iframe,input,li,object,ol,p,select,textarea,ul {
+  margin: 0;
+  padding: 0
+}
+
+img{
+  vertical-align: top;
+}
+fieldset,iframe,img {
+  border: none
+}
+fieldset {
+  height: -webkit-fill-available;
+}
+
+iframe {
+  display: block
+}
+
+ol,ul {
+  list-style-type: none
+}
+
+table {
+  clear: both;
+  border-collapse: collapse
+}
+
+address,em {
+  font-style: normal
+}
+
+select {
+  height: 20px;
+  font-size: 12px
+}
+
+input {
+  padding-right: 1px
+}
+
+button {padding: 0px;}
+
+.ipad input[type=text],button,input[type=button],input[type=image],input[type=submit],textarea {
+  -webkit-appearance: none;
+  -webkit-text-size-adjust: none;
+  -webkit-border-radius: 0
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0.1);
+}
+
+table {
+  border-collapse: collapse;
+}
+
+table caption {
+  display: none !important;
+}
+
+select { border-radius:0; /* 아이폰 사파리 보더 없애기 */
+  -webkit-appearance:none; /* 화살표 없애기 for chrome*/
+  -moz-appearance:none; /* 화살표 없애기 for firefox*/
+  appearance:none /* 화살표 없애기 공통*/
+}
+
+.blind {
+  overflow: hidden!important;
+  position: absolute!important;
+  clip: rect(0 0 0 0)!important;
+  width: 1px!important;
+  height: 1px!important;
+  margin: -1px!important
+}
+
+/* css reset  end*/
+
+
+
+
+
+
+/* .banner:before {
+content: '';
+position: absolute;
+top: 0;
+left: 0;
+width: 50%;
+height: 610px;
+background: url(img/leftbackground.jpg);
+z-index: 1;
+} */
+
+
+
+
+.section2 {
+  height: 260px;
+  background:#f1fef4 url(../img/section2_m.jpg) 50% 0 no-repeat;
+  background-size: 320px 260px;
+  -webkit-background-size: 320px 260px;
+}
+
+
+.section3 {
+  height: 260px;
+  background:#fcf2f4 url(../img/section3_m.jpg) 50% 0 no-repeat;
+  background-size: 320px 260px;
+  -webkit-background-size: 320px 260px;
+  margin-bottom: 32.5px;
+}
+
+.section2 .more_btn {
+  position: absolute;
+  bottom: 8%;
+  left: 38%;
+  width: 79px;
+  height: 26px;
+
+}
+
+
+.section3 .more_btn {
+  position: absolute;
+  bottom: 8%;
+  left: 38%;
+  width: 79px;
+  height: 26px;
+}
+
+
+.section4 {
+  height: 497.5px;
+  background: url(../img/section4_m.jpg) 50% 0 no-repeat;
+  background-size: 320px 497.5px;
+  -webkit-background-size: 320px 497.5px;
+}
+
+.Participation_Condition {
+  display: table;
+  position: absolute;
+  top: 110px;
+  left: 9px;
+}
+.Participation_Condition strong, .Participation_Condition p{
+  display: table-cell;
+
+}
+.Participation_Condition p {
+  font-family:'나눔 고딕', NanumGothic, '돋움', Dotum, sans-serif!important;
+  font-size: 12px;
+  letter-spacing: -0.5px!important;
+  letter-spacing:normal;
+  line-height: 17.5px;
+  color: #707070;
+}
+.Participation_Condition strong {
+  width: 86px;
+  font-size: 12px;
+  color: #8482b0;
+}
+
+
+
+
+.Point_payment {
+  display: table;
+  position: absolute;
+  top: 192px;
+  left: 10px;
+}
+.Point_payment strong, .Point_payment p{
+  display: table-cell;
+
+}
+.Point_payment p {
+  font-family:'나눔 고딕', NanumGothic, '돋움', Dotum, sans-serif!important;
+  font-size: 12px;
+  letter-spacing: -0.5px!important;
+  letter-spacing:normal;
+  color: #707070;
+
+}
+.Point_payment strong {
+  width:85px;
+  font-size: 12px;
+  color: #8482b0;
+}
+
+.section4 .Enter_referrer_btn {
+  position: absolute;
+  bottom: 8%;
+  left: 11%;
+  width: 249px;
+  height: 41px;
+}
+
+
+
+.section_notice {
+  height: 188px;
+  padding: 40px 0px;
+  background: #f3f5f7;
+}
+
+
+.notice_tit {
+  font-size: 18px;
+  color: #333333;
+  font-weight:normal;
+  padding: 0 0 0 8px;
+  letter-spacing: -0.5px;
+}
+
+.notice_list {
+  margin-top: 15px;
+}
+
+.notice_list .item {
+  position: relative;
+padding: 0 0 0 8px;
+line-height: 17.5px;
+margin-bottom: 6px;
+font-size: 10px;
+color: #707070;
+}
+
+
+.section5 {
+  height: 458px;
+  background: url(../img/section6_m.jpg) 50% 0 no-repeat;
+  background-size: 320px 458px;
+  -webkit-background-size: 320px 458px;
+}
+
+
+.wrap_flick {
+    background: #e9ecef;
+}
+
+.wrap_flick .tit_area {
+    position: relative;
+    height: 45px;
+    padding: 0 14px;
+    line-height: 45px;
+}
+
+.wrap_flick .tit_area .tit {
+    font-family: HelveticaNeue-Light, Helvetica, AppleSDGothicNeo-Semibold, "나눔고딕", nanumgothic, sans-serif;
+    font-size: 16px;
+}
+
+
+.wrap_flick .flick_event {
+    position: relative;
+    z-index: 200;
+    width: 100%;
+    overflow: hidden;
+    margin-top: -13px;
+}
+
+.wrap_flick .event_list {
+    display: table;
+    overflow: hidden;
+    margin: 15px 14px;
+}
+
+.wrap_flick .event_list li {
+    display: table-cell;
+    padding-right: 2px;
+    line-height: 0;
+}
+
+
+
+.section6 {
+  height: 72.5px;
+  background: url(../img/naverpay_connect.jpg) 50% 0 no-repeat;
+  background-size: 320px 72.5px;
+  -webkit-background-size: 320px 72.5px;
+}
+
+
+
+.footer {
+    background-color: #dcdddf;
+    padding: 34px 0 27px;
+}
+
+
+.footer .list_sns {
+    width: 223px;
+    margin: 0 auto 30px;
+    background: url(../img/footer_m.jpg) no-repeat;
+    background-size: 223px 105px;
+    -webkit-background-size: 222px 105px;
+        height: 105px;
+}
+
+
+.list_sns .item_sns {
+    float: left;
+    width: 48px;
+    height: 48px;
+    margin-right: 10px;
+    padding: 0 0 6px;
+}
+
+.list_sns .item_sns:nth-child(4n) {
+  margin-right: 0px;
+}
+
+.list_sns li a {
+    display: block;
+    height: 48px;
+    overflow: hidden;
+    text-indent: -1000px;
+}
+
+
+.footer .copy {
+    text-align: center;
+}
+
+.footer .link_corp {
+    font-family: Helvetica, sans-serif;
+    color: #999;
+}
+
+.footer .list_sns:after {
+    content: '';
+    display: block;
+    clear: both;
+}
+
+
