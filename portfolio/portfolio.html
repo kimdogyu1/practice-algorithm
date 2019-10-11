@@ -7,6 +7,35 @@
 	<title>UI캠프 실습</title>
 	<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
 	<link rel="stylesheet" type="text/css" href="css/test.css">
+	
+	
+	
+		<script>
+	///// 스크롤 100픽셀 내리면 상단메뉴 박스생김 /////
+	var currentScrollTop = 0;
+	window.onload = function() {
+		scrollController();
+		$(window).on("scroll", function() {
+			scrollController();
+		});
+	}
+
+	function scrollController() {
+		currentScrollTop = $(window).scrollTop();
+		if (currentScrollTop > 200) {
+			// $(".num").removeClass("num");
+			$(".num").css("display","block");
+		} else {
+			$(".num").css("display","none");
+		}
+
+	}
+
+	</script>
+
+	
+	
+	
 
 	<style>
 
