@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<!-- <meta http-equiv="Content-Script-Type" content="text/javascript"> -->
+	<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=2.0,minimum-scale=1.0,user-scalable=yes">
+	<title>naverpay_promotionpage_oneday</title>
+	<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+	<link rel="stylesheet" type="text/css" href="css/kimdogyu.css">
+
+	<script>
+	$(document).ready(function(){
+
+		$(".service_item1").hover(function(){
+			$(".servicetxt1").css("color", "#39c467");
+		}, function(){
+			$(".servicetxt1").css("color", "#1b1d21");
+		});
+
+		$(".service_item2").hover(function(){
+			$(".servicetxt2").css("color", "#39c467");
+		}, function(){
+			$(".servicetxt2").css("color", "#1b1d21");
+		});
+
+		$(".service_item3").hover(function(){
+			$(".servicetxt3").css("color", "#39c467");
+		}, function(){
+			$(".servicetxt3").css("color", "#1b1d21");
+		});
+
+		$(".service_item4").hover(function(){
+			$(".servicetxt4").css("color", "#39c467");
+		}, function(){
+			$(".servicetxt4").css("color", "#1b1d21");
+		});
+
+		$(".service_item5").hover(function(){
+			$(".servicetxt5").css("color", "#39c467");
+		}, function(){
+			$(".servicetxt5").css("color", "#1b1d21");
+		});
+
+		$(".service_item6").hover(function(){
+			$(".servicetxt6").css("color", "#39c467");
+		}, function(){
+			$(".servicetxt6").css("color", "#1b1d21");
+		});
+
+
+
+	});
+
+</script>
+
+</head>
+
+<body>
+
+	<div class="wrap">
+
+		<header>
+			<div class="inner">
+
+
+				<h1><a href="#" class="item_link"><span class="blind">Knock</span></a></h1>
+
+				<ul class="menu">
+					<li class="menu_list"><a href="#">admin</a></li>
+					<li class="menu_list"><a href="#">결과조회</a></li>
+				</ul>
+
+			</div>
+		</header>
+
+		<div class="container">
+
+			<div class="content">
+
+
+				<div class="spot">
+					<div class="inner">
+						<dl class="consulting">
+
+							<dt class="consulting_tit">다양한 인사 제도부터 우리가 지켜야할 최소한의 기준이 궁금하다면</dt>
+
+							<dd class="consulting_txt">무엇이든 문의해주세요. 실명으로 직접 말하기 어려운 경우라면,
+								익명으로도 상담 가능합니다</dd>
+
+							</dl>
+
+
+							<ul class="invalid-name">
+								<li class="linkmove_list1"><a href="#"><span class="blind">상담/문의</span></a></li>
+								<li class="linkmove_list2"><a href="#"><span class="blind">신고/제보</span></a></li>
+							</ul>
+
+						</div>
+					</div>
+
+
+
+					<div class="section01">
+						<div class="inner">
+
+							<table class="sevicekinds" >
+								<tbody>
+									<tr>
+										<td class="service_item service_item1" rowspan="2"><a href="#">
+
+											<strong class="servicetit">업무 투명성 기준 보기</strong>
+											<p class="servicetxt servicetxt1">부업,겸업,겸직<br>
+												회사제도 남용<br>
+												사적이익추구</p>
+											</a></td>
+
+											<td class="service_item service_item2" rowspan="2"><a href="#">
+
+												<strong class="servicetit">건강한 조직문화 보기</strong>
+												<p class="servicetxt servicetxt2">직장 내 성희롱<br>
+													리더 권한 남용<br>
+													차별</p>
+												</a></td>
+
+
+												<td class="service_item service_item3" rowspan="2"><a href="#">
+
+													<strong class="servicetit">외부 comm. 보기</strong>
+													<p class="servicetxt servicetxt3">서비스 소개<br>
+														언론사 대응<br>
+														SNS 포스팅</p>
+													</a></td>
+
+													<td class="service_item relevantsite">
+														<strong>
+															관련사이트
+														</strong>
+													</td>
+												</tr>
+
+												<tr>
+
+
+													<td class="service_item relevantsite">
+														<a href="#">
+															<em>
+																NVO(노사협의회) 고충상담실
+															</em>
+
+															<p>
+																회사에 직접 말하기 어려운 내용을
+																사원협의회와 상담하고 싶다면
+															</p>
+
+														</a>
+													</td>
+
+												</tr>
+
+												<tr>
+													<td class="service_item service_item4" rowspan="2"><a href="#">
+
+														<strong class="servicetit">정보 보안 관련 기준 보기</strong>
+														<p class="servicetxt servicetxt4">회사 내 정보보안<br>
+															사용자 정보보호</p>
+														</a></td>
+
+														<td class="service_item service_item5" rowspan="2"><a href="#">
+
+															<strong class="servicetit">파트너십 관련 기준 보기</strong>
+															<p class="servicetxt servicetxt5">파트너사 대응 기준<br>
+																선물, 식사, 접대<br>
+																구매 프로세스</p>
+															</a></td>
+
+															<td class="service_item service_item6" rowspan="2"><a href="#">
+
+																<strong class="servicetit">그 외 인사제도 보기</strong>
+																<p class="servicetxt servicetxt6">근로시간제<br>
+																	복리후생<br>
+																	리뷰</p>
+																</a></td>
+
+
+																<td class="service_item relevantsite">
+																	<a href="#">
+																		<em>
+																			With U
+																		</em>
+
+																		<p>
+																			직장 내 성희롱 또는 괴롭힘을 당했다면
+																		</p>
+
+																	</a>
+																</td>
+
+
+															</tr>
+
+															<tr>
+
+																<td class="service_item relevantsite">
+																	<a href="#">
+																		<em>
+																			책임리포트
+																		</em>
+
+																		<p>
+																			회사와 이해 상충되거나 회사에
+																			미리 알려야 하는 사안이 있다면
+																		</p>
+
+																	</a>
+																</td>
+
+
+															</tr>
+
+														</tbody>
+													</table>
+
+
+												</div>
+
+											</div>
+
+
+											<footer>
+												<div class="inner">
+
+													<h2><a href="#" class="item_link"><span class="blind">Knock</span></a></h2>
+
+													<strong class="Copyright-NAVER-Co">
+														Copyright ⓒ NAVER Corp. All Rights Reserved.
+													</strong>
+
+
+												</div>
+											</footer>
+
+
+
+
+										</div>
+
+									</div>
+
+
+								</div>
+
+
+							</body>
+
+
+							</html>
