@@ -7,51 +7,7 @@
 	<title>naverpay_promotionpage_oneday</title>
 	<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
 	<link rel="stylesheet" type="text/css" href="css/kimdogyu.css">
-
-	<script>
-	$(document).ready(function(){
-
-		$(".service_item1").hover(function(){
-			$(".servicetxt1").css("color", "#39c467");
-		}, function(){
-			$(".servicetxt1").css("color", "#1b1d21");
-		});
-
-		$(".service_item2").hover(function(){
-			$(".servicetxt2").css("color", "#39c467");
-		}, function(){
-			$(".servicetxt2").css("color", "#1b1d21");
-		});
-
-		$(".service_item3").hover(function(){
-			$(".servicetxt3").css("color", "#39c467");
-		}, function(){
-			$(".servicetxt3").css("color", "#1b1d21");
-		});
-
-		$(".service_item4").hover(function(){
-			$(".servicetxt4").css("color", "#39c467");
-		}, function(){
-			$(".servicetxt4").css("color", "#1b1d21");
-		});
-
-		$(".service_item5").hover(function(){
-			$(".servicetxt5").css("color", "#39c467");
-		}, function(){
-			$(".servicetxt5").css("color", "#1b1d21");
-		});
-
-		$(".service_item6").hover(function(){
-			$(".servicetxt6").css("color", "#39c467");
-		}, function(){
-			$(".servicetxt6").css("color", "#1b1d21");
-		});
-
-
-
-	});
-
-</script>
+	<script src="js/kimdogyu.js"></script>
 
 </head>
 
@@ -80,573 +36,166 @@
 
 				<div class="spot">
 					<div class="inner">
-						<dl class="consulting">
-
-							<dt class="consulting_tit">다양한 인사 제도부터 우리가 지켜야할 최소한의 기준이 궁금하다면</dt>
-
-							<dd class="consulting_txt">무엇이든 문의해주세요. 실명으로 직접 말하기 어려운 경우라면,
-								익명으로도 상담 가능합니다</dd>
-
-							</dl>
 
 
-							<ul class="invalid-name">
-								<li class="linkmove_list1"><a href="#"><span class="blind">상담/문의</span></a></li>
-								<li class="linkmove_list2"><a href="#"><span class="blind">신고/제보</span></a></li>
-							</ul>
+						<h2 class="consulting">
+							<strong class="consulting_tit">
+								다양한 인사 제도부터 우리가 지켜야할 최소한의 기준이 궁금하다면
+							</strong>
+							<em class="consulting_txt">무엇이든 문의해주세요. 실명으로 직접 말하기 어려운 경우라면,<br> 익명으로도 상담 가능합니다</em>
+						</h2>
 
-						</div>
+
+
+						<ul class="invalid-name">
+							<li class="linkmove_list1"><a href="#"><span class="blind">상담/문의</span></a></li>
+							<li class="linkmove_list2"><a href="#"><span class="blind">신고/제보</span></a></li>
+						</ul>
+
 					</div>
+				</div>
 
 
 
-					<div class="section01">
-						<div class="inner">
+				<div class="section01">
 
-							<table class="sevicekinds" >
-								<tbody>
-									<tr>
-										<td class="service_item service_item1" rowspan="2"><a href="#">
+					<div class="inner">
 
-											<strong class="servicetit">업무 투명성 기준 보기</strong>
-											<p class="servicetxt servicetxt1">부업,겸업,겸직<br>
-												회사제도 남용<br>
-												사적이익추구</p>
-											</a></td>
+						<ul class="servicekinds">
 
-											<td class="service_item service_item2" rowspan="2"><a href="#">
-
-												<strong class="servicetit">건강한 조직문화 보기</strong>
-												<p class="servicetxt servicetxt2">직장 내 성희롱<br>
-													리더 권한 남용<br>
-													차별</p>
-												</a></td>
+							<li class="service_item service_item1">
+								<a href="#">
+									<strong class="servicetit">업무 투명성 기준 보기</strong>
+									<p class="servicetxt servicetxt1">부업,겸업,겸직<br>
+										회사제도 남용<br>
+										사적이익추구</p>
+									</a>
+								</li>
 
 
-												<td class="service_item service_item3" rowspan="2"><a href="#">
-
-													<strong class="servicetit">외부 comm. 보기</strong>
-													<p class="servicetxt servicetxt3">서비스 소개<br>
-														언론사 대응<br>
-														SNS 포스팅</p>
-													</a></td>
-
-													<td class="service_item relevantsite">
-														<strong>
-															관련사이트
-														</strong>
-													</td>
-												</tr>
-
-												<tr>
+								<li class="service_item service_item2">
+									<a href="#">
+										<strong class="servicetit">건강한 조직문화 보기</strong>
+										<p class="servicetxt servicetxt2">직장 내 성희롱<br>
+											리더 권한 남용<br>
+											차별</p>
+										</a>
+									</li>
 
 
-													<td class="service_item relevantsite">
-														<a href="#">
-															<em>
-																NVO(노사협의회) 고충상담실
-															</em>
+									<li class="service_item service_item3">
+										<a href="#">
+											<strong class="servicetit">외부 comm. 보기</strong>
+											<p class="servicetxt servicetxt3">서비스 소개<br>
+												언론사 대응<br>
+												SNS 포스팅</p>
+											</a>
+										</li>
 
-															<p>
-																회사에 직접 말하기 어려운 내용을
-																사원협의회와 상담하고 싶다면
-															</p>
 
+										<li class="service_item service_item4">
+											<a href="#">
+												<strong class="servicetit">정보 보안 관련 기준 보기</strong>
+												<p class="servicetxt servicetxt4">회사 내 정보보안<br>
+													사용자 정보보호</p>
+												</a>
+											</li>
+
+											<li class="service_item service_item5">
+												<a href="#">
+													<strong class="servicetit">파트너십 관련 기준 보기</strong>
+													<p class="servicetxt servicetxt5">파트너사 대응 기준<br>
+														선물, 식사, 접대<br>
+														구매 프로세스</p>
+													</a>
+												</li>
+
+												<li class="service_item service_item6">
+													<a href="#">
+														<strong class="servicetit">그 외 인사제도 보기</strong>
+														<p class="servicetxt servicetxt6">근로시간제<br>
+															복리후생<br>
+															리뷰</p>
 														</a>
-													</td>
-
-												</tr>
-
-												<tr>
-													<td class="service_item service_item4" rowspan="2"><a href="#">
-
-														<strong class="servicetit">정보 보안 관련 기준 보기</strong>
-														<p class="servicetxt servicetxt4">회사 내 정보보안<br>
-															사용자 정보보호</p>
-														</a></td>
-
-														<td class="service_item service_item5" rowspan="2"><a href="#">
-
-															<strong class="servicetit">파트너십 관련 기준 보기</strong>
-															<p class="servicetxt servicetxt5">파트너사 대응 기준<br>
-																선물, 식사, 접대<br>
-																구매 프로세스</p>
-															</a></td>
-
-															<td class="service_item service_item6" rowspan="2"><a href="#">
-
-																<strong class="servicetit">그 외 인사제도 보기</strong>
-																<p class="servicetxt servicetxt6">근로시간제<br>
-																	복리후생<br>
-																	리뷰</p>
-																</a></td>
+													</li>
 
 
-																<td class="service_item relevantsite">
-																	<a href="#">
-																		<em>
-																			With U
-																		</em>
+												</ul>
 
-																		<p>
-																			직장 내 성희롱 또는 괴롭힘을 당했다면
-																		</p>
+												<ul class="relevantsitekinds">
+													<li class="relevantsite">
+														<strong class="relevantsitetit">관련사이트</strong>
 
-																	</a>
-																</td>
+													</li>
 
 
-															</tr>
+													<li class="relevantsite">
+														<a href="#">
 
-															<tr>
-
-																<td class="service_item relevantsite">
-																	<a href="#">
-																		<em>
-																			책임리포트
-																		</em>
-
-																		<p>
-																			회사와 이해 상충되거나 회사에
-																			미리 알려야 하는 사안이 있다면
-																		</p>
-
-																	</a>
-																</td>
+															<strong class="relevantsitetit_name">NVO(노사협의회) 고충상담실</strong>
+															<p class="relevantsitetit_txt">회사에 직접 말하기 어려운 내용을<br>
+																사원협의회와 상담하고 싶다면</p>
+															</a>
+														</li>
 
 
-															</tr>
+														<li class="relevantsite">
+															<a href="#">
+																<strong class="relevantsitetit_name">With U</strong>
+																<p class="relevantsitetit_txt">직장 내 성희롱 또는 괴롭힘을 당했다면</p>
+															</a>
+														</li>
 
-														</tbody>
-													</table>
 
+
+														<li class="service_item relevantsite">
+															<a href="#">
+																<strong class="relevantsitetit_name">책임리포트</strong>
+																<p class="relevantsitetit_txt">회사와 이해 상충되거나 회사에<br>
+																	미리 알려야 하는 사안이 있다면</p>
+																</a>
+															</li>
+														</ul>
+
+
+
+
+													</div>
 
 												</div>
+
+
+
+
+												<footer>
+													<div class="inner">
+
+														<h3><a href="#" class="item_link"><span class="blind">NAVER</span></a></h3>
+
+														<strong class="Copyright-NAVER-Co">
+															Copyright ⓒ NAVER Corp. All Rights Reserved.
+														</strong>
+
+
+													</div>
+												</footer>
+
+
+
 
 											</div>
 
-
-											<footer>
-												<div class="inner">
-
-													<h2><a href="#" class="item_link"><span class="blind">Knock</span></a></h2>
-
-													<strong class="Copyright-NAVER-Co">
-														Copyright ⓒ NAVER Corp. All Rights Reserved.
-													</strong>
-
-
-												</div>
-											</footer>
-
-
-
-
 										</div>
+
 
 									</div>
 
 
-								</div>
+								</body>
 
 
-							</body>
-
-
-							</html>
-							
-							
-							
-							
-							
-							
-							
-							/////////////////////////////////////////////////////////////
-							
-							
-							
-							
-							@charset "utf-8";
-
-@font-face {
-  font-family: 'NanumSquareB';
-  src: url("../font/NanumSquare/NanumSquare_seB.eot");
-  src: url("../font/NanumSquare/NanumSquare_seB.eot?#iefix") format("embedded-opentype"), url("../font/NanumSquare/NanumSquare_seB.woff") format("woff"), url("../font/NanumSquare/NanumSquare_seB.ttf") format("truetype");
-}
-
-
-@font-face {
-  font-family: 'NanumSquare';
-  src: url("../font/NanumSquare/NanumSquare_seR.eot");
-  src: url("../font/NanumSquare/NanumSquare_seR.eot?#iefix") format("embedded-opentype"), url("../font/NanumSquare/NanumSquare_seR.woff") format("woff"), url("../font/NanumSquare/NanumSquare_seR.ttf") format("truetype");
-}
-
-
-/* common */
-body {
-
-  margin: 0;
-  padding: 0;
-  font-family: 'NanumSquareB',"나눔 고딕", NanumGothic, "Helvetica Neue", Arial, helvetica, "Apple SD Gothic Neo", "나눔바른고딕 옛한글", '돋움', Dotum, BlinkMacSystemFont, '굴림',gulim, sans-serif!important;
-  text-align: left;
-  font-size: 12px;
-  line-height:20px;
-  color: #000
-}
-
-
-html[data-useragent*=mac] body * {
-  font-family:'NanumSquareB',"나눔 고딕", NanumGothic, "Helvetica Neue", Arial, helvetica, "Apple SD Gothic Neo", "나눔바른고딕 옛한글", '돋움', Dotum, BlinkMacSystemFont, '굴림',gulim, sans-serif!important;
-}
-
-input,select,textarea {
-  font-family:'NanumSquareB',"나눔 고딕", NanumGothic, "Helvetica Neue", Arial, helvetica, "Apple SD Gothic Neo", "나눔바른고딕 옛한글", '돋움', Dotum, BlinkMacSystemFont, '굴림',gulim, sans-serif!important;
-  font-size: 13px;
-  color: #000
-}
-
-input {
-  padding-right: 0px !important;
-}
-
-address,dd,div,dl,dt,em,fieldset,form,h1,h2,h3,h4,iframe,input,li,object,ol,p,select,textarea,ul {
-  margin: 0;
-  padding: 0
-}
-
-img{
-  vertical-align: top;
-}
-fieldset,iframe,img {
-  border: none
-}
-fieldset {
-  height: -webkit-fill-available;
-}
-
-iframe {
-  display: block
-}
-
-ol,ul {
-  list-style-type: none
-}
-
-table {
-  clear: both;
-  border-collapse: collapse
-}
-
-address,em {
-  font-style: normal
-}
-
-select {
-  height: 20px;
-  font-size: 12px
-}
-
-input {
-  padding-right: 1px
-}
-
-button {padding: 0px;}
-
-.ipad input[type=text],button,input[type=button],input[type=image],input[type=submit],textarea {
-  -webkit-appearance: none;
-  -webkit-text-size-adjust: none;
-  -webkit-border-radius: 0
-}
-
-a {
-  color: inherit;
-  text-decoration: none;
-  -webkit-tap-highlight-color: rgba(0, 0, 0, 0.1);
-}
-
-table {
-  border-collapse: collapse;
-}
-
-table caption {
-  display: none !important;
-}
-
-select { border-radius:0; /* 아이폰 사파리 보더 없애기 */
-  -webkit-appearance:none; /* 화살표 없애기 for chrome*/
-  -moz-appearance:none; /* 화살표 없애기 for firefox*/
-  appearance:none /* 화살표 없애기 공통*/
-}
-
-.blind {
-  overflow: hidden!important;
-  position: absolute!important;
-  clip: rect(0 0 0 0)!important;
-  width: 1px!important;
-  height: 1px!important;
-  margin: -1px!important
-}
-
-/* css reset  end*/
-
-.wrap {
-  min-width:1600px;
-  margin: 0 auto;
-}
-
-.inner {
-  width:1160px;
-  margin:0 auto;
-}
-
-header {
-  height: 80px;
-  background-color: #ffffff;
-
-}
-
-header h1{
-  position: relative;
-  line-height: 80px; float:left; background-image: url("../img/knock.png"); background-repeat: no-repeat;background-position: center;
-  width: 97px; height: 80px;
-}
-
-header h1 a{
-  position: absolute;
-  top: 0px;
-  left: 0px;
-  width:97px;
-  height: 80px;
-}
-
-header:after {
-  clear: both;
-  content: '';
-  display: block;
-}
-
-
-header .menu{
-  float:right;
-  height: 80px;
-}
-
-header .menu:after {
-  clear: both;
-  content: '';
-  display: block;
-}
-
-header .menu_list {
-  float:left;
-  width:44px;
-  height: 12px;
-  line-height: 12px;
-  margin:34px 0px 0px 50px;
-}
-
-header .menu_list a {
-  float: left;
-  width: 44px;
-  height: 12px;
-}
-
-.spot {
-  background: url('../img/main-img.png') 50% 0 no-repeat;
-  height: 306px;
-  margin-bottom: 44px;
-}
-
-.consulting_tit {
-  width: 473px;
-  padding-top: 80px;
-  font-size: 18px;
-  line-height: 1;
-  letter-spacing: -0.5px;
-  color: #000000;
-}
-
-.consulting_txt {
-  width: 346px;
-  height: 52px;
-  font-family: 'NanumSquare';
-  font-size: 14px;
-  line-height: 1.86;
-  letter-spacing: -0.5px;
-  margin-bottom: 20px;
-  color: #000000;
-}
-
-
-.linkmove_list1 {
-  display: inline-block;;
-  position: relative;
-  background: url('../img/invalid-name.png') 50% 0 no-repeat;
-  width: 140px;
-  height: 46px;
-  margin-right: 9px;
-}
-
-.linkmove_list2 {
-  display: inline-block;;
-  position: relative;
-  background: url('../img/invalid-name_2.png') 50% 0 no-repeat;
-  width: 140px;
-  height: 46px;
-}
-
-.linkmove_list1 a {
-  position: absolute;
-  width:140px;
-  height: 46px;
-  top: 0px;
-  left: 0px;
-}
-
-.linkmove_list2 a {
-  position: absolute;
-  width:140px;
-  height: 46px;
-  top: 0px;
-  left: 0px;
-}
-
-.section01 {
-  margin-bottom: 51px;
-}
-
-.sevicekinds, .service_item {
-  border: solid 1px #edeff2;
-}
-
-
-
-.service_item {
-  position: relative;
-  width: 289px;
-  height: 96px;
-  background-color: #ffffff;
-}
-
-.service_item a {
-  position: absolute;
-  width: 289px;
-  height: 196.5px;
-  left: 0px;
-  top: 0px;
-}
-
-
-.servicetit{
-  display: block;
-  height: 12px;
-  font-size: 12px;
-  line-height: 1;
-  color: #afb3ba;
-  padding-left: 40px;
-  margin-top: 52px;
-}
-
-.servicetxt {
-  max-width: 107px;
-  height: 72px;
-  font-size: 14px;
-  line-height: 1.71;
-  letter-spacing: -0.5px;
-  margin-top: 20px;
-  padding-left: 40px;
-  color: #31343b;
-}
-
-
-
-.relevantsite strong{
-  font-size: 15px;
-  line-height: 1;
-  color: #1b1d21;
-  margin-left: 30px;
-}
-
-.relevantsite {
-  position: relative;
-  width: 289px;
-  height: 96px;
-  background-color: rgba(249, 250, 251, 0.5);
-
-}
-
-.relevantsite a {
-  position: absolute;
-  width: 289px;
-  height: 98px;
-  left: 0px;
-  top: 0px;
-}
-
-
-.relevantsite em {
-  display: block;
-  width: 147px;
-  height: 12px;
-  margin-top: 21px;
-  margin-bottom: 8px;
-  font-size: 12px;
-  line-height: 1;
-  color: #1b1d21;
-}
-
-.relevantsite p {
-  max-width: 190px;
-  height: 36px;
-  font-family: 'NanumSquare';
-  line-height: 1.5;
-  color: #31343b;
-}
-
-.relevantsite :nth-child(n+2)::after {
-  position: absolute;
-  content: '';
-  background: url(../img/culture-code-arrow.png) 5px 1px no-repeat;
-  width: 16px;
-  height: 16px;
-  left: 241px;
-  top: 43px;
-}
-
-
-footer {
-  height: 72px;
-  background-color: #ffffff;
-}
-
-footer h2{
-  position: relative;
-  line-height: 72px; float:left; background-image: url("../img/naver.png"); background-repeat: no-repeat;background-position: center;
-  width: 56px; height: 72px;
-}
-
-footer h2 a{
-  position: absolute;
-  top: 0px;
-  left: 0px;
-  width: 56px;
-  height: 72px;
-}
-
-footer:after {
-  clear: both;
-  content: '';
-  display: block;
-}
-
-
-.Copyright-NAVER-Co {
-  width: 259px;
-  line-height: 72px;;
-  color: #afb3ba;
-  margin-left: 10px;
-}
-
-							
-							
-							
+								</html>
+								
+								
+								
+					
